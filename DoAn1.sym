@@ -1,0 +1,199 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-021 strtok.save
+022-025 _Randseed
+026     vitriTKSelect
+027-02E tk
+02F-036 mk
+037     vitriTK
+038     vitriMK
+039     vitriManHinh
+03A     key
+03B.0   isDoiMK
+03B.1   isAdmin
+03C     isTaoTK
+03D     resultThemUser
+03E-03F MAIN.i
+040-043 MAIN.arr
+044-045 inputTK.arr
+044-045 inputData.arr
+044-04B checkMatKhau.arr
+044-045 themUser.tkUSer
+044     KEY_NHAN.MAQUETCOT
+044-045 checkTK.i
+044     xulyManHinhAdmin.@SCRATCH1
+044     mHXuLyDoiMKUser.@SCRATCH1
+044     mHXuLyTaoTK.@SCRATCH1
+044     xulyDoiMK.@SCRATCH1
+044     MAIN.@SCRATCH1
+045     KEY_NHAN.MAPHIM
+046     KEY_NHAN.HANG
+046     inputTK.x
+046-04D checkTK.arr
+046     inputData.x
+046-047 themUser.mkUser
+047     KEY_NHAN.COT
+047     inputData.@SCRATCH1
+047     inputTK.@SCRATCH1
+048     @MUL88.P1
+048-049 themUser.i
+048     KEY_NHAN.@SCRATCH1
+048     inputData.@SCRATCH2
+048     inputTK.@SCRATCH2
+049     @MUL88.P1
+04A     themUser.c
+04B-052 themUser.arr
+04C     resetTK.@SCRATCH1
+04C     resetMK.@SCRATCH1
+04C     checkMatKhau.@SCRATCH1
+04D     resetTK.@SCRATCH2
+04D     resetMK.@SCRATCH2
+04D     checkMatKhau.@SCRATCH2
+04E-04F checkTK.s
+050-053 checkTK.@STRING954
+053     themUser.@SCRATCH1
+054-055 strcmp.s1
+054     lcd_goto_xy.x
+054-055 readEEPROM.arr
+054     mHThongBaoSai.@SCRATCH1
+054     @PSTRINGC7_899.@SCRATCH1
+054     checkTK.@SCRATCH1
+054     themUser.@SCRATCH2
+055-056 writeEEPROM.arr
+055     lcd_goto_xy.y
+055     @delay_ms1.P1
+055     @PSTRINGC7_899.@SCRATCH2
+055     checkTK.@SCRATCH2
+056-057 strcmp.s2
+056     readEEPROM.vitri
+056-059 lcd_goto_xy.lcd_vitri
+056     @PSTRINGC7_899.@SCRATCH3
+057     writeEEPROM.vitri
+057     lcd_data.mht
+057     readEEPROM.i
+057     @PSTRINGC7_899.@SCRATCH4
+058     readEEPROM.c
+058     writeEEPROM.i
+058     strcmp.@SCRATCH1
+059     writeEEPROM.@SCRATCH1
+059     readEEPROM.@SCRATCH1
+05A     lcd_goto_xy.@SCRATCH1
+05A     writeEEPROM.@SCRATCH2
+05A     readEEPROM.@SCRATCH2
+05B     lcd_command.mdk
+05C-05D lcd_out.x
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const926.call
+00000E  @const929.call
+000017  @const930.call
+000022  @const932.call
+000024  @const934.call
+000026  @const947.call
+00002E  @const948.call
+000032  @const949.call
+000035  @const956.call
+00003E  @const957.call
+000046  @const958.call
+00004F  @const959.call
+000053  @const967.call
+000054  @const974.call
+00005D  @const975.call
+00005F  @const977.call
+000069  @const978.call
+00006B  @const979.call
+00006D  @const991.call
+000078  @const992.call
+000083  @const993.call
+00008C  @const995.call
+000096  lcd_out
+0000AE  lcd_command
+0000B7  @delay_ms1
+0000CB  lcd_setup
+0000E9  lcd_clear
+0000F0  lcd_goto_xy
+000102  lcd_data
+00010B  @PSTRINGC7_899
+000161  hienThiTTPhu
+000178  mHTaiKhoan
+00018B  writeEEPROM
+0001DC  KEY_NHAN
+00021C  @MUL88
+000246  strcmp
+00028A  readEEPROM
+0002B2  mHMatKhau
+0002BF  mHThongBaoSai
+0002D3  checkTK
+000322  mHAdmin
+00034F  mHUser
+000372  resetMK
+000379  resetTKMK
+000379  resetTK
+000381  checkMatKhau
+0003A7  xulyDoiMK
+0003CC  mHXuLyTaoTK
+0003E1  themUser
+000461  mHDoiMatKhau
+00047C  xulyManHinhAdmin
+000495  mHTaoTaiKhoan
+0004ED  inputTK
+000534  mHXuLyDoiMKUser
+00056B  MAIN
+00056B  @cinit1
+00057C  @cinit2
+000604  inputData
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    D:\DoAn1\
+
+Project Files:
+    DoAn1.c                                                 [04-Mar-19 19:15  CRC=E08F86D7]
+    C:\Program Files (x86)\PICC\Devices\16f877a.h           [12-Nov-13 14:35  CRC=81334808]
+    C:\Program Files (x86)\PICC\Drivers\stdlib.h            [08-Jun-11 14:39  CRC=0B6669CF]
+    C:\Program Files (x86)\PICC\Drivers\stddef.h            [16-Jul-10 09:27  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\Drivers\string.h            [14-Jul-11 10:13  CRC=23EDEC8F]
+    C:\Program Files (x86)\PICC\Drivers\ctype.h             [03-Jan-08 13:55  CRC=2D1F019F]
+    LCD.c                                                   [02-Mar-19 10:38  CRC=4BB15F86]
+
+Source signature=DF15D254
+
+Units:
+    DoAn1 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   DoAn1.xsym
+    Errors:      DoAn1.err
+    Ext Symbols: DoAn1.esym
+    INHX8:       DoAn1.hex
+    Symbols:     DoAn1.sym
+    List:        DoAn1.lst
+    Debug/COFF:  DoAn1.cof
+    Project:     DoAn1.ccspjt
+    Call Tree:   DoAn1.tre
+    Statistics:  DoAn1.STA

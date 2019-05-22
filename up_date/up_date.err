@@ -1,0 +1,26 @@
+*** Error 166 "D:\DoAn1\up_date\LCD 4 bit.c" Line 17(32,33): Invalid overload function  lcd_init
+*** Error 166 "D:\DoAn1\up_date\LCD 4 bit.c" Line 28(32,33): Invalid overload function  lcd_init
+*** Error 28 "D:\DoAn1\up_date\LCD 4 bit.c" Line 30(19,23): Expecting an identifier
+*** Error 43 "D:\DoAn1\up_date\LCD 4 bit.c" Line 30(25,26): Expecting a declaration
+*** Error 28 "D:\DoAn1\up_date\LCD 4 bit.c" Line 31(14,17): Expecting an identifier
+*** Error 43 "D:\DoAn1\up_date\LCD 4 bit.c" Line 31(18,19): Expecting a declaration
+*** Error 28 "D:\DoAn1\up_date\LCD 4 bit.c" Line 32(18,25): Expecting an identifier
+*** Error 43 "D:\DoAn1\up_date\LCD 4 bit.c" Line 32(26,27): Expecting a declaration
+*** Error 28 "D:\DoAn1\up_date\LCD 4 bit.c" Line 33(19,23): Expecting an identifier
+*** Error 43 "D:\DoAn1\up_date\LCD 4 bit.c" Line 33(25,26): Expecting a declaration
+*** Error 28 "D:\DoAn1\up_date\LCD 4 bit.c" Line 37(19,23): Expecting an identifier
+*** Error 43 "D:\DoAn1\up_date\LCD 4 bit.c" Line 37(25,26): Expecting a declaration
+*** Error 28 "D:\DoAn1\up_date\LCD 4 bit.c" Line 39(18,22): Expecting an identifier
+*** Error 43 "D:\DoAn1\up_date\LCD 4 bit.c" Line 39(24,25): Expecting a declaration
+*** Error 28 "D:\DoAn1\up_date\LCD 4 bit.c" Line 40(18,22): Expecting an identifier
+*** Error 43 "D:\DoAn1\up_date\LCD 4 bit.c" Line 40(24,25): Expecting a declaration
+*** Error 28 "D:\DoAn1\up_date\LCD 4 bit.c" Line 41(18,22): Expecting an identifier
+*** Error 43 "D:\DoAn1\up_date\LCD 4 bit.c" Line 41(24,25): Expecting a declaration
+*** Error 28 "D:\DoAn1\up_date\LCD 4 bit.c" Line 42(18,22): Expecting an identifier
+*** Error 43 "D:\DoAn1\up_date\LCD 4 bit.c" Line 42(24,25): Expecting a declaration
+*** Error 43 "D:\DoAn1\up_date\LCD 4 bit.c" Line 43(5,6): Expecting a declaration
+*** Error 58 "D:\DoAn1\up_date\LCD 4 bit.c" Line 48(19,23): Expecting a close paren
+*** Error 58 "D:\DoAn1\up_date\LCD 4 bit.c" Line 50(19,23): Expecting a close paren
+*** Error 58 "D:\DoAn1\up_date\LCD 4 bit.c" Line 58(21,23): Expecting a close paren
+*** Error 58 "D:\DoAn1\up_date\LCD 4 bit.c" Line 65(19,23): Expecting a close paren
+*** Error 58 "D:\DoAn1\up_date\LCD 4 bit.c" Line 67(19,23): Expecting a close paren

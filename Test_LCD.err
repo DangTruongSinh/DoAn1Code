@@ -1,0 +1,5 @@
+>>> Warning 202 "D:\Chep Cho SV\Thu Vien\TV_PICKIT2_SHIFT_DS13B07_I2C.C" Line 15(60,67): Variable never used:   GIAYTAM
+>>> Warning 202 "Test_LCD.c" Line 34(18,21): Variable never used:   key
+      Memory usage:   ROM=12%      RAM=5% - 7%
+      0 Errors,  2 Warnings.
+Build Successful.

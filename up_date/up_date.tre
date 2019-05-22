@@ -1,0 +1,242 @@
+ÀÄup_date
+   ÀÄMAIN  1/160  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄLCD_Init  0/34  Ram=0
+      ³  ÃÄLCD_SetData  0/39  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄLCD_SetData  0/39  Ram=1
+      ³  ÃÄLCD_PulseEnable  0/17  Ram=0
+      ³  ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄLCD_PulseEnable  0/17  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PulseEnable  0/17  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_SetData  0/39  Ram=1
+      ³  ÃÄLCD_PulseEnable  0/17  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutCmd  0/11  Ram=1
+      ³  ³  ÃÄLCD_SetData  0/39  Ram=1
+      ³  ³  ÃÄLCD_PulseEnable  0/17  Ram=0
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄLCD_SetData  0/39  Ram=1
+      ³  ³  ÀÄLCD_PulseEnable  0/17  Ram=0
+      ³  ³     ÀÄ*
+      ³  ÃÄLCD_PutCmd  0/11  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutCmd  0/11  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄLCD_PutCmd  0/11  Ram=1
+      ³     ÀÄ*
+      ÃÄrtc_init  0/148  Ram=2
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_READ_1  0/69  Ram=3
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÀÄ@I2C_WRITE_1  0/74  Ram=1
+      ÃÄLCD_PutCmd  0/11  Ram=1
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_629  0/86  Ram=4
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄLCD_PutCmd  0/11  Ram=1
+      ³  ³     ÀÄ*
+      ³  ÀÄLCD_PutChar  0/12  Ram=1
+      ³     ÀÄ*
+      ÃÄLCD_PutCmd  0/11  Ram=1
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_629  0/86  Ram=4
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄReadRTC  0/196  Ram=4
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³  ÃÄ@I2C_READ_1  0/69  Ram=3
+      ³  ÃÄ@I2C_READ_1  0/69  Ram=3
+      ³  ÃÄ@I2C_READ_1  0/69  Ram=3
+      ³  ÃÄ@I2C_READ_1  0/69  Ram=3
+      ³  ÃÄ@I2C_READ_1  0/69  Ram=3
+      ³  ÃÄ@I2C_READ_1  0/69  Ram=3
+      ³  ÀÄ@I2C_READ_1  0/69  Ram=3
+      ÃÄconvert_bcd  0/45  Ram=0
+      ÃÄhienthi1  0/177  Ram=2
+      ³  ÃÄLCD_PutCmd  0/11  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_629  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_629  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutCmd  0/11  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_629  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCD_PutChar  0/12  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄ@PSTRINGC7_629  0/86  Ram=4
+      ³     ÀÄ*
+      ÃÄ@MUL88  0/37  Ram=2
+      ÃÄ@MUL88  0/37  Ram=2
+      ÃÄ@MUL88  0/37  Ram=2
+      ÃÄchinh_gio  0/659  Ram=4
+      ³  ÃÄReadRTC  0/196  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄconvert_bcd  0/45  Ram=0
+      ³  ÃÄhienthi1  0/177  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄhienthi1  0/177  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@goto10953  0/10  Ram=0
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@goto10993  0/10  Ram=0
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@MUL88  0/37  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÀÄWriteRTC  (Inline)  Ram=3
+      ³     ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/74  Ram=1
+      ³     ÀÄ@I2C_WRITE_1  0/74  Ram=1
+      ÀÄchinh_bt  0/150  Ram=3
+         ÃÄLCD_PutCmd  0/11  Ram=1
+         ³  ÀÄ*
+         ÃÄ@PSTRINGC7_629  0/86  Ram=4
+         ³  ÀÄ*
+         ÃÄhienthi2  0/115  Ram=2
+         ³  ÃÄLCD_PutCmd  0/11  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄ@PSTRINGC7_629  0/86  Ram=4
+         ³  ³  ÀÄ*
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄ@DIV88  0/21  Ram=3
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄ@DIV88  0/21  Ram=3
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄ@DIV88  0/21  Ram=3
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄ@DIV88  0/21  Ram=3
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄ@DIV88  0/21  Ram=3
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÃÄ@DIV88  0/21  Ram=3
+         ³  ÃÄLCD_PutChar  0/12  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÀÄ@PSTRINGC7_629  0/86  Ram=4
+         ³     ÀÄ*
+         ÀÄhienthi2  0/115  Ram=2
+            ÀÄ*

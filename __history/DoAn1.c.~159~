@@ -1,0 +1,404 @@
+#include <16f887.h>
+#include <stdlib.h>
+#include <string.h>
+#FUSES NOWDT, HS, NOPUT, NOPROTECT, NODEBUG, NOBROWNOUT, NOLVP, NOCPD, NOWRT
+#use delay(CLOCK=20MHz) 
+#include "D:\DoAn1\LCD.c"
+unsigned int8 vitriTKSelect;
+unsigned char tk[8];
+unsigned char mk[8];
+unsigned int8 vitriTK=0;
+unsigned int8 vitriMK=0;
+unsigned int8 vitriManHinh =3;
+unsigned int8 key;
+unsigned int1 isDoiMK =0;
+unsigned int8 isTaoTK =0;
+unsigned int1 isAdmin =1;
+unsigned int8 resultThemUser;
+UNSIGNED INT KEY_NHAN()
+{     SIGNED INT8  MAQUETCOT,MAPHIM,HANG,COT;
+      MAQUETCOT = 0B11111110;   MAPHIM=HANG=0XFF;
+      FOR(COT=0;COT<4;COT++)
+         {   
+            OUTPUT_B(MAQUETCOT);  MAQUETCOT  = (MAQUETCOT<<1) + 0x1;
+            IF         (!INPUT(PIN_B4))      {HANG=0;   BREAK;}
+            ELSE    IF (!INPUT(PIN_B5))      {HANG=1;   BREAK;}
+            ELSE    IF (!INPUT(PIN_B6))      {HANG=2;   BREAK;}
+            ELSE    IF (!INPUT(PIN_B7))      {HANG=3;   BREAK;}
+          
+         }          
+      IF (HANG!=0XFF)   MAPHIM   = COT*4 + HANG;
+      RETURN(MAPHIM);
+  }
+
+void resetTK()
+{
+   vitriTK=0;
+  tk[vitriTK] = '\0';
+}
+void resetMK()
+{
+  vitriMK=0;
+  tk[vitriMK] = '\0';
+}
+void resetTKMK()
+{
+  resetTK();
+  resetMK();
+}
+void mHThongBaoSai()
+{
+   lcd_clear();
+   lcd_goto_xy(1,0);
+   lcd_data("  Thong tin tk sai!");
+   delay_ms(2000);
+}
+void hienThiTTPhu()
+{
+   lcd_goto_xy(1,0);
+   lcd_data("Chieu dai max = 8");
+   lcd_goto_xy(2,0);
+   lcd_data("Nhan OK de dang nhap");  
+}
+void mHTaiKhoan()
+{
+   lcd_clear();
+   vitriManHinh =1;
+   hienThiTTPhu();
+   lcd_goto_xy(0,0);
+   lcd_data("TK:");
+   lcd_goto_xy(0,3);
+   
+     
+}
+void mHMatKhau()
+{
+   lcd_clear();
+   hienThiTTPhu();
+   lcd_goto_xy(0,0);
+   lcd_data("MK:");
+ 
+}
+void writeEEPROM(char arr[],int vitri)
+{
+   int i;
+   for(i = 0;arr[i]!='\0';i++)
+   {
+      write_eeprom (vitri + i, arr[i]);
+   }
+   for(;i<8;i++)
+   {
+        write_eeprom (vitri + i,0xff);
+   }
+  
+}
+void readEEPROM(char arr[],int vitri)
+{
+   int i;
+   char c;
+   for( i =0;i < 8;i++)
+   {
+      c =   read_eeprom (vitri + i);
+      if(c == 0xff)
+        {
+         arr[i]='\0';
+         return;
+        }
+      else
+         arr[i] =c;
+
+   }
+}
+
+void mHUser()
+{
+   lcd_clear();
+   lcd_goto_xy(1,0);
+   lcd_data("1.Doi mat khau");
+   lcd_goto_xy(2,0);
+   lcd_data("2.Thoat");
+   lcd_goto_xy(3,0);
+   lcd_data("Nhap:");
+
+}
+void checkTK()
+{
+   unsigned int16 i;
+   char arr[8];
+   tk[vitriTK] = '\0';
+   char *s = "123";
+   isAdmin = 0;
+   if(strcmp(s,tk) == 0)
+      isAdmin = 1;
+   
+      
+   for(i = 0;i<256;i=i+16)
+   {
+      if(read_eeprom(i) == 0xff)
+         continue;
+      readEEPROM(arr,i);
+      if(strcmp(arr,tk) == 0)
+     {
+         mHMatKhau();
+         vitriManHinh++;
+         vitriTKSelect = i;
+         return;
+     }
+   }
+        mHThongBaoSai();
+        mHTaiKhoan();
+        vitriTK = 0;
+
+}
+void mHAdmin()
+{
+   lcd_clear();
+   lcd_goto_xy(0,0);
+   lcd_data("1.Them tai khoan");
+   lcd_goto_xy(1,0);
+   lcd_data("2.Xoa tai khoan");
+   lcd_goto_xy(2,0);
+   lcd_data("3.Doi MK  4.Exit");
+   lcd_goto_xy(3,0);
+   lcd_data("Nhap : ");
+}
+void checkMatKhau()
+{
+   
+   char arr[8];
+   mk[vitriMK] = '\0';
+   readEEPROM(arr,vitriTKSelect+8);
+   if(strcmp(arr,mk) == 0)
+     {
+         if(isAdmin == 1)
+            mHAdmin();
+         else
+            mHUser();
+         vitriManHinh++;
+         resetTKMK();
+         return;
+     }
+   mHThongBaoSai();
+   mHMatKhau();
+   vitriMK = 0;
+  
+       
+}
+void inputData(char arr[],unsigned int8 x,unsigned int8 &vitri)
+{
+    lcd_goto_xy(x,3+vitri);
+    if(vitriManHinh >= 2)
+      lcd_data("*");
+    else  
+      lcd_data(key+0x30);
+    arr[vitri] = key+0x30;
+    vitri++;
+
+}
+void inputTK(char arr[],unsigned int8 x,unsigned int8 &vitri)
+{
+    lcd_goto_xy(x,3+vitri);
+    lcd_data(key+0x30);
+    arr[vitri] = key+0x30;
+    vitri++;
+
+}
+
+void mHDoiMatKhau()
+{
+   lcd_clear();
+   lcd_goto_xy(1,0);
+   lcd_data("Nhap mat khau moi");
+   lcd_goto_xy(0,0);
+   lcd_data("MK:");
+   lcd_goto_xy(0,3);
+}
+void mHTaoTaiKhoan()
+{
+   lcd_clear();
+   lcd_goto_xy(0,0);
+   lcd_data("Tao tai khoan User");
+   lcd_goto_xy(1,0);
+   lcd_data("TK:");
+   lcd_goto_xy(2,0);
+   lcd_data("MK:");
+   lcd_goto_xy(1,3);
+}
+unsigned int8 themUser(unsigned char tkUSer[],unsigned char mkUser[])
+{
+   unsigned int16 i;
+   unsigned char c;
+   unsigned char arr[8];
+   for( i = 0; i < 256;i = i+ 16)
+   {
+    
+      // kiem tra xem tkUser co bi trung hay khong
+      readEEPROM(arr,i);
+      if(strcmp(arr,tkUSer)==0)
+         return 2;
+   }
+   for(i = 16; i< 256 ;i = i+16)
+   {
+       c = read_eeprom(i);
+      if(c == 0xff)
+         break;
+   }
+   if( i < 256)
+   {
+      writeEEPROM(tkUSer,i);
+      writeEEPROM(mkUSer,i+8);
+      return 1;
+   }
+   return 0;
+}
+void xulyManHinhAdmin()
+{
+   if(isDoiMK == 0 && isTaoTK == 0)
+   {
+      if(key == 4)
+       {
+         resetTKMK();
+         mHTaiKhoan();
+       }
+     else if(key == 3)
+       {
+        isDoiMK = 1;
+        resetMK();
+        mHDoiMatKhau();
+       }
+    else if(key == 1)
+    {
+      isTaoTK = 1;
+      resetTK();
+      resetMK();
+      mHTaoTaiKhoan();  
+    }
+  }
+   else if(isDoiMK == 1)
+   {
+     inputData(mk,0,vitriMK);
+   }
+   else if(isTaoTK == 1)
+   {
+      inputTK(tk,1,vitriTK);
+   }
+   else if(isTaoTK == 2)
+   {
+      inputData(mk,2,vitriMK);
+   }
+}
+
+void mHXuLyDoiMKUser()
+{
+   if(isDoiMK == 0)
+   {
+      if(key == 2)
+         {
+            resetTKMK();
+            mHTaiKhoan();
+         }
+      else
+         {
+           isDoiMK = 1;
+           resetMK();
+           mHDoiMatKhau();
+         }
+   }
+   else
+   {
+        inputData(mk,0,vitriMK);
+        
+   }
+}
+void mHXuLyTaoTK()
+{
+   if(isTaoTK == 1)
+               {
+                  isTaoTK = 2;
+                  lcd_goto_xy(2,3);
+               }
+    else
+               {
+                  isTaoTK = 0;
+                  lcd_clear();
+                  lcd_goto_xy(1,0);
+                  resultThemUser = themUser(tk,mk);
+                  if(resultThemUser == 1)
+                     {
+                        lcd_data("Tao user thanh cong!");
+                     }
+                  else if(resultThemUser == 0)
+                     lcd_data("Ko the tao them User");
+                  else
+                     lcd_data("   Tk da ton tai!");
+                  delay_ms(1000);
+                  mHAdmin();
+               }
+}
+void xulyDoiMK()
+{
+    writeEEPROM(mk,vitriTKSelect+8);
+    lcd_clear();
+    lcd_goto_xy(1,0);
+    lcd_data(" Doi MK Thanh Cong!");
+    delay_ms(2000);
+    if(isAdmin == 1)
+      mHAdmin();
+    else
+      mHUser();
+    isDoiMK = 0;
+}
+void main()
+{
+    set_tris_d(0x00);
+    lcd_setup();
+    unsigned int16 i;
+ /*   unsigned char arr[] = {'1','2','3','\0'};
+     writeEEPROM(arr,0);
+      writeEEPROM(arr,8);*/
+  //  mHTaiKhoan();
+  /*  char arr[] = {'1','2','3','4','5','6','\0'};
+    writeEEPROM(arr,0);*/
+   // mHAdmin();
+   mHTaiKhoan();
+    while(true)
+    {
+      key = key_nhan();
+       if(key!=0xff)
+       {
+           if(key == 15 && vitriManHinh == 1 )
+            {
+               checkTK();
+            }
+          else if(key == 15 && vitriManHinh == 2)
+          {
+              checkMatKhau();
+          }
+          else if(key == 15 && vitriManHinh == 3 && isDoiMK == 1)
+          {
+             xulyDoiMK();
+          }
+         else if(key == 15 && vitriManHinh == 3 && isTaoTK !=0)
+          {
+               mHXuLyTaoTK();
+          }
+          else if(vitriManHinh == 1)
+          {
+              inputData(tk,0,vitriTK);
+          }
+          else if(vitriManHinh == 2)
+          {
+               inputData(mk,0,vitriMK);
+          }
+          else if(vitriManHinh == 3 && isAdmin == 1)
+          {
+                xulyManHinhAdmin();
+          }
+          else if(vitriManHinh == 3 && isAdmin == 0)
+          {
+            mHXuLyDoiMKUser();
+          }
+          while(key_nhan()!=0xff);
+       }
+    }
+}

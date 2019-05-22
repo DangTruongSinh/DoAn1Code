@@ -1,0 +1,2747 @@
+CCS PCM C Compiler, Version 5.015, 5967               16-Mar-19 15:53
+
+               Filename:   D:\DoAn1\DoAn1ChinhDoi.lst
+
+               ROM used:   1689 words (21%)
+                           Largest free fragment is 2048
+               RAM used:   67 (18%) at main() level
+                           83 (23%) worst case
+               Stack used: 6 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  04
+0001:  MOVWF  0A
+0002:  GOTO   47C
+0003:  NOP
+.................... #include <16f877a.h> 
+.................... //////////// Standard Header file for the PIC16F877A device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877A 
+0004:  DATA 20,10
+0005:  DATA 54,34
+0006:  DATA 6F,37
+0007:  DATA 67,10
+0008:  DATA F4,34
+0009:  DATA 6E,10
+000A:  DATA D4,25
+000B:  DATA A0,39
+000C:  DATA E1,34
+000D:  DATA 21,00
+000E:  DATA 31,17
+000F:  DATA 54,34
+0010:  DATA E5,36
+0011:  DATA 20,3A
+0012:  DATA E1,34
+0013:  DATA A0,35
+0014:  DATA E8,37
+0015:  DATA 61,37
+0016:  DATA 00,01
+0017:  DATA 32,17
+0018:  DATA D8,37
+0019:  DATA 61,10
+001A:  DATA F4,30
+001B:  DATA 69,10
+001C:  DATA 6B,34
+001D:  DATA EF,30
+001E:  DATA 6E,00
+001F:  DATA 33,17
+0020:  DATA C4,37
+0021:  DATA 69,10
+0022:  DATA CD,25
+0023:  DATA 20,10
+0024:  DATA 34,17
+0025:  DATA 45,3C
+0026:  DATA 69,3A
+0027:  DATA 00,01
+0028:  DATA 4E,34
+0029:  DATA 61,38
+002A:  DATA 20,1D
+002B:  DATA 20,00
+002C:  DATA 31,17
+002D:  DATA C4,37
+002E:  DATA 69,10
+002F:  DATA ED,30
+0030:  DATA 74,10
+0031:  DATA 6B,34
+0032:  DATA E1,3A
+0033:  DATA 00,01
+0034:  DATA 32,17
+0035:  DATA 54,34
+0036:  DATA EF,30
+0037:  DATA 74,00
+0038:  DATA 4E,34
+0039:  DATA 61,38
+003A:  DATA 3A,00
+003B:  DATA D4,25
+003C:  DATA 3A,00
+003D:  DATA CD,25
+003E:  DATA 3A,00
+003F:  DATA 20,10
+0040:  DATA 20,22
+0041:  DATA 6F,10
+0042:  DATA E4,30
+0043:  DATA 69,10
+0044:  DATA ED,30
+0045:  DATA 78,10
+0046:  DATA 3D,10
+0047:  DATA 38,00
+0048:  DATA 20,27
+0049:  DATA E8,30
+004A:  DATA 6E,10
+004B:  DATA 44,10
+004C:  DATA E4,32
+004D:  DATA 20,3C
+004E:  DATA E1,31
+004F:  DATA 20,37
+0050:  DATA E8,30
+0051:  DATA 6E,00
+0052:  DATA D4,25
+0053:  DATA 3A,00
+0054:  DATA CD,25
+0055:  DATA 3A,00
+0056:  DATA 20,10
+0057:  DATA 20,10
+0058:  DATA D4,30
+0059:  DATA 6F,10
+005A:  DATA D5,39
+005B:  DATA 65,39
+005C:  DATA 00,00
+005D:  DATA D4,25
+005E:  DATA 3A,00
+005F:  DATA 20,10
+0060:  DATA D8,37
+0061:  DATA 61,10
+0062:  DATA D4,30
+0063:  DATA 69,10
+0064:  DATA 4B,34
+0065:  DATA EF,30
+0066:  DATA 6E,10
+0067:  DATA D5,39
+0068:  DATA 65,39
+0069:  DATA 00,01
+006A:  DATA 4E,34
+006B:  DATA 61,37
+006C:  DATA 20,22
+006D:  DATA 20,32
+006E:  DATA 65,10
+006F:  DATA F8,30
+0070:  DATA 63,10
+0071:  DATA 6E,34
+0072:  DATA 61,37
+0073:  DATA 00,00
+0074:  DATA 20,10
+0075:  DATA 4E,34
+0076:  DATA 61,38
+0077:  DATA A0,26
+0078:  DATA 4B,10
+0079:  DATA ED,37
+007A:  DATA 69,1D
+007B:  DATA 00,01
+007C:  DATA CD,25
+007D:  DATA 3A,00
+007E:  DATA 20,22
+007F:  DATA EF,34
+0080:  DATA A0,26
+0081:  DATA 4B,10
+0082:  DATA 74,34
+0083:  DATA 61,37
+0084:  DATA 68,10
+0085:  DATA E3,37
+0086:  DATA EE,33
+0087:  DATA 21,00
+0088:  DATA 20,10
+0089:  DATA D8,37
+008A:  DATA 61,10
+008B:  DATA 74,34
+008C:  DATA 61,37
+008D:  DATA 68,10
+008E:  DATA E3,37
+008F:  DATA EE,33
+0090:  DATA 21,00
+0091:  DATA D4,30
+0092:  DATA 69,10
+0093:  DATA 4B,34
+0094:  DATA EF,30
+0095:  DATA 6E,10
+0096:  DATA EB,37
+0097:  DATA 20,3A
+0098:  DATA 6F,37
+0099:  DATA 20,3A
+009A:  DATA E1,34
+009B:  DATA 00,01
+009C:  DATA 20,10
+009D:  DATA 4E,34
+009E:  DATA 61,38
+009F:  DATA A0,26
+00A0:  DATA 4B,10
+00A1:  DATA ED,37
+00A2:  DATA 69,1D
+00A3:  DATA 00,01
+00A4:  DATA CD,25
+00A5:  DATA 3A,00
+00A6:  DATA 20,2A
+00A7:  DATA E1,37
+00A8:  DATA 20,2A
+00A9:  DATA 6B,10
+00AA:  DATA 74,34
+00AB:  DATA 61,37
+00AC:  DATA 68,10
+00AD:  DATA E3,37
+00AE:  DATA EE,33
+00AF:  DATA 21,00
+00B0:  DATA 20,10
+00B1:  DATA D4,25
+00B2:  DATA 20,32
+00B3:  DATA 61,10
+00B4:  DATA F4,37
+00B5:  DATA 6E,10
+00B6:  DATA F4,30
+00B7:  DATA E9,10
+00B8:  DATA 00,00
+*
+012C:  MOVF   0B,W
+012D:  MOVWF  64
+012E:  BCF    0B.7
+012F:  BSF    03.5
+0130:  BSF    03.6
+0131:  BSF    0C.7
+0132:  BSF    0C.0
+0133:  NOP
+0134:  NOP
+0135:  BCF    03.5
+0136:  BCF    03.6
+0137:  BTFSC  64.7
+0138:  BSF    0B.7
+0139:  BSF    03.6
+013A:  MOVF   0C,W
+013B:  ANDLW  7F
+013C:  BTFSC  03.2
+013D:  GOTO   180
+013E:  BCF    03.6
+013F:  MOVWF  64
+0140:  BSF    03.6
+0141:  MOVF   0D,W
+0142:  BCF    03.6
+0143:  MOVWF  65
+0144:  BSF    03.6
+0145:  MOVF   0F,W
+0146:  BCF    03.6
+0147:  MOVWF  66
+0148:  MOVF   64,W
+0149:  MOVWF  67
+014A:  CALL   123
+014B:  MOVF   65,W
+014C:  BSF    03.6
+014D:  MOVWF  0D
+014E:  BCF    03.6
+014F:  MOVF   66,W
+0150:  BSF    03.6
+0151:  MOVWF  0F
+0152:  BCF    03.6
+0153:  MOVF   0B,W
+0154:  MOVWF  67
+0155:  BCF    0B.7
+0156:  BSF    03.5
+0157:  BSF    03.6
+0158:  BSF    0C.7
+0159:  BSF    0C.0
+015A:  NOP
+015B:  NOP
+015C:  BCF    03.5
+015D:  BCF    03.6
+015E:  BTFSC  67.7
+015F:  BSF    0B.7
+0160:  BSF    03.6
+0161:  RLF    0C,W
+0162:  RLF    0E,W
+0163:  ANDLW  7F
+0164:  BTFSC  03.2
+0165:  GOTO   180
+0166:  BCF    03.6
+0167:  MOVWF  64
+0168:  BSF    03.6
+0169:  MOVF   0D,W
+016A:  BCF    03.6
+016B:  MOVWF  65
+016C:  BSF    03.6
+016D:  MOVF   0F,W
+016E:  BCF    03.6
+016F:  MOVWF  66
+0170:  MOVF   64,W
+0171:  MOVWF  67
+0172:  CALL   123
+0173:  MOVF   65,W
+0174:  BSF    03.6
+0175:  MOVWF  0D
+0176:  BCF    03.6
+0177:  MOVF   66,W
+0178:  BSF    03.6
+0179:  MOVWF  0F
+017A:  INCF   0D,F
+017B:  BTFSC  03.2
+017C:  INCF   0F,F
+017D:  BCF    03.6
+017E:  GOTO   12C
+017F:  BSF    03.6
+0180:  BCF    03.6
+0181:  RETURN
+*
+01F3:  CLRF   77
+01F4:  CLRF   78
+01F5:  MOVF   60,W
+01F6:  BCF    03.0
+01F7:  BTFSC  61.0
+01F8:  ADDWF  77,F
+01F9:  RRF    77,F
+01FA:  RRF    78,F
+01FB:  BTFSC  61.1
+01FC:  ADDWF  77,F
+01FD:  RRF    77,F
+01FE:  RRF    78,F
+01FF:  BTFSC  61.2
+0200:  ADDWF  77,F
+0201:  RRF    77,F
+0202:  RRF    78,F
+0203:  BTFSC  61.3
+0204:  ADDWF  77,F
+0205:  RRF    77,F
+0206:  RRF    78,F
+0207:  BTFSC  61.4
+0208:  ADDWF  77,F
+0209:  RRF    77,F
+020A:  RRF    78,F
+020B:  BTFSC  61.5
+020C:  ADDWF  77,F
+020D:  RRF    77,F
+020E:  RRF    78,F
+020F:  BTFSC  61.6
+0210:  ADDWF  77,F
+0211:  RRF    77,F
+0212:  RRF    78,F
+0213:  BTFSC  61.7
+0214:  ADDWF  77,F
+0215:  RRF    77,F
+0216:  RRF    78,F
+....................  
+.................... #list 
+....................  
+.................... #include <string.h> // su dung thu vien nay de xai ham so sanh 2 chuoi 
+.................... //////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996,2008 Custom Computer Services            //// 
+.................... //// This source code may only be used by licensed users of the CCS C   //// 
+.................... //// compiler.  This source code may only be distributed to other       //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction  //// 
+.................... //// or distribution is permitted without written permission.           //// 
+.................... //// Derivative programs created using this software in object code     //// 
+.................... //// form are not restricted in any way.                                //// 
+.................... //////////////////////////////////////////////////////////////////////////// 
+....................  
+.................... #ifndef _STRING 
+.................... #define _STRING 
+.................... #include <stddef.h> 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996,2003 Custom Computer Services           //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+....................  
+.................... #ifndef _STDDEF 
+....................  
+.................... #define _STDDEF 
+....................  
+.................... #if sizeof(unsigned int8 *)==1 
+.................... #define ptrdiff_t unsigned int8 
+.................... #else 
+.................... #define ptrdiff_t unsigned int16 
+.................... #endif 
+....................  
+.................... #if defined(__PCB__) 
+.................... #define size_t unsigned int8 
+.................... #else 
+.................... #define size_t unsigned int16 
+.................... #endif 
+.................... #define wchar_t char 
+.................... #define NULL 0 
+....................  
+.................... #define offsetof(s,f) (offsetofbit(s,f)/8) 
+....................  
+.................... #endif 
+....................  
+.................... #include <ctype.h> 
+.................... //////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996,2003 Custom Computer Services            //// 
+.................... //// This source code may only be used by licensed users of the CCS C   //// 
+.................... //// compiler.  This source code may only be distributed to other       //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction  //// 
+.................... //// or distribution is permitted without written permission.           //// 
+.................... //// Derivative programs created using this software in object code     //// 
+.................... //// form are not restricted in any way.                                //// 
+.................... //////////////////////////////////////////////////////////////////////////// 
+....................  
+.................... #ifndef _CTYPE 
+.................... #define _CTYPE 
+....................  
+.................... #define islower(x)  isamong(x,"abcdefghijklmnopqrstuvwxyz") 
+.................... #define isupper(x)  isamong(x,"ABCDEFGHIJKLMNOPQRSTUVWXYZ") 
+.................... #define isalnum(x)  isamong(x,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz") 
+.................... #define isalpha(x)  isamong(x,"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz") 
+.................... #define isdigit(x)  isamong(x,"0123456789") 
+.................... #define isspace(x)  ((x)==' ') 
+.................... #define isxdigit(x) isamong(x,"0123456789ABCDEFabcdef") 
+.................... #define iscntrl(x)  ((x)<' ') 
+.................... #define isprint(x)  ((x)>=' ') 
+.................... #define isgraph(x)  ((x)>' ') 
+.................... #define ispunct(x)  (((x)>' ')&&!isalnum(x)) 
+....................  
+.................... #endif 
+....................  
+....................  
+....................  
+....................  
+....................  
+.................... ////////////////////////////////////////////// 
+.................... //// Uncomment the following define to    //// 
+.................... //// allow some functions to use a        //// 
+.................... //// quicker algorithm, but use more ROM  //// 
+.................... ////                                      //// 
+.................... //// #define FASTER_BUT_MORE_ROM          //// 
+.................... ////////////////////////////////////////////// 
+....................  
+....................  
+....................  
+.................... /*Copying functions*/ 
+.................... /* standard template: 
+....................    void *memmove(void *s1, void *s2, size_t n). 
+....................    Copies max of n characters safely (not following ending '\0') 
+....................    from s2 in s1; if s2 has less than n characters, appends 0 */ 
+....................  
+.................... char *memmove(void *s1,char *s2,size_t n) 
+.................... { 
+....................    char *sc1; 
+....................    char *sc2; 
+....................    sc1=s1; 
+....................    sc2=s2; 
+....................    if(sc2<sc1 && sc1 <sc2 +n) 
+....................       for(sc1+=n,sc2+=n;0<n;--n) 
+....................          *--sc1=*--sc2; 
+....................    else 
+....................       for(;0<n;--n) 
+....................          *sc1++=*sc2++; 
+....................   return s1; 
+....................   } 
+....................  
+.................... /* Standard template: char *strcpy(char *s1, const char *s2) 
+....................    copies the string s2 including the null character to s1. 
+....................    This is a compiler built in to handle the different address 
+....................    spaces */ 
+....................  
+.................... #define strcopy strcpy 
+....................  
+.................... /* standard template: 
+....................    char *strncpy(char *s1, const char *s2, size_t n). 
+....................    Copies max of n characters (not following ending '\0') 
+....................    from s2 in s1; if s2 has less than n characters, appends 0 */ 
+....................  
+.................... char *strncpy(char *s1, char *s2, size_t n) 
+.................... { 
+....................   char *s; 
+....................  
+....................   for (s = s1; n > 0 && *s2 != '\0'; n--) 
+....................      *s++ = *s2++; 
+....................   for (; n > 0; n--) 
+....................      *s++ = '\0'; 
+....................  
+....................   return(s1); 
+.................... } 
+.................... /***********************************************************/ 
+....................  
+.................... /*concatenation functions*/ 
+.................... /* standard template: char *strcat(char *s1, const char *s2) 
+.................... appends s2 to s1*/ 
+....................  
+.................... char *strcat(char *s1, char *s2) 
+.................... { 
+....................    char *s; 
+....................  
+....................    for (s = s1; *s != '\0'; ++s); 
+....................    while(*s2 != '\0') 
+....................    { 
+....................       *s = *s2; 
+....................       ++s; 
+....................       ++s2; 
+....................    } 
+....................  
+....................    *s = '\0'; 
+....................    return(s1); 
+.................... } 
+.................... /* standard template: char *strncat(char *s1, char *s2,size_t n) 
+.................... appends not more than n characters from s2 to s1*/ 
+....................  
+.................... char *strncat(char *s1, char *s2, size_t n) 
+.................... { 
+....................    char *s; 
+....................  
+....................    for (s = s1; *s != '\0'; ++s); 
+....................    while(*s2 != '\0' && 0<n) 
+....................    { 
+....................       *s = *s2; 
+....................       ++s; 
+....................       ++s2; 
+....................       --n; 
+....................    } 
+....................  
+....................    *s = '\0'; 
+....................    return(s1); 
+.................... } 
+....................  
+.................... /***********************************************************/ 
+....................  
+....................  
+.................... /*comparison functions*/ 
+.................... /* standard template: signed int memcmp(void *s1, void *s2). 
+....................    Compares s1 & s2; returns -1 if s1<s2, 0 if s1=s2, 1 if s1>s2 */ 
+....................  
+.................... signed int8 memcmp(void * s1,char *s2,size_t n) 
+.................... { 
+.................... char *su1, *su2; 
+.................... for(su1=s1, su2=s2; 0<n; ++su1, ++su2, --n) 
+.................... { 
+....................    if(*su1!=*su2) 
+....................       return ((*su1<*su2)?-1:+1); 
+.................... } 
+.................... return 0; 
+.................... } 
+....................  
+.................... /* standard template: int strcmp(const char *s1, const char *s2). 
+....................    Compares s1 & s2; returns -1 if s1<s2, 0 if s1=s2, 1 if s1>s2 */ 
+....................  
+.................... signed int8 strcmp(char *s1, char *s2) 
+.................... { 
+....................    for (; *s1 == *s2; s1++, s2++) 
+*
+0249:  MOVF   67,W
+024A:  MOVWF  7A
+024B:  MOVF   66,W
+024C:  MOVWF  04
+024D:  BCF    03.7
+024E:  BTFSC  7A.0
+024F:  BSF    03.7
+0250:  MOVF   00,W
+0251:  MOVWF  6A
+0252:  MOVF   69,W
+0253:  MOVWF  7A
+0254:  MOVF   68,W
+0255:  MOVWF  04
+0256:  BCF    03.7
+0257:  BTFSC  7A.0
+0258:  BSF    03.7
+0259:  MOVF   00,W
+025A:  SUBWF  6A,W
+025B:  BTFSS  03.2
+025C:  GOTO   274
+....................       if (*s1 == '\0') 
+025D:  MOVF   67,W
+025E:  MOVWF  7A
+025F:  MOVF   66,W
+0260:  MOVWF  04
+0261:  BCF    03.7
+0262:  BTFSC  7A.0
+0263:  BSF    03.7
+0264:  MOVF   00,F
+0265:  BTFSS  03.2
+0266:  GOTO   26A
+....................          return(0); 
+0267:  MOVLW  00
+0268:  MOVWF  78
+0269:  GOTO   28C
+026A:  MOVF   67,W
+026B:  MOVWF  7A
+026C:  MOVF   66,W
+026D:  INCF   66,F
+026E:  BTFSC  03.2
+026F:  INCF   67,F
+0270:  INCF   68,F
+0271:  BTFSC  03.2
+0272:  INCF   69,F
+0273:  GOTO   249
+....................    return((*s1 < *s2) ? -1: 1); 
+0274:  MOVF   67,W
+0275:  MOVWF  7A
+0276:  MOVF   66,W
+0277:  MOVWF  04
+0278:  BCF    03.7
+0279:  BTFSC  67.0
+027A:  BSF    03.7
+027B:  MOVF   00,W
+027C:  MOVWF  6A
+027D:  MOVF   69,W
+027E:  MOVWF  7A
+027F:  MOVF   68,W
+0280:  MOVWF  04
+0281:  BCF    03.7
+0282:  BTFSC  69.0
+0283:  BSF    03.7
+0284:  MOVF   00,W
+0285:  SUBWF  6A,W
+0286:  BTFSC  03.0
+0287:  GOTO   28A
+0288:  MOVLW  FF
+0289:  GOTO   28B
+028A:  MOVLW  01
+028B:  MOVWF  78
+028C:  RETURN
+.................... } 
+.................... /* standard template: int strcoll(const char *s1, const char *s2). 
+....................    Compares s1 & s2; returns -1 if s1<s2, 0 if s1=s2, 1 if s1>s2 */ 
+....................  
+.................... signed int8 strcoll(char *s1, char *s2) 
+.................... { 
+....................    for (; *s1 == *s2; s1++, s2++) 
+....................       if (*s1 == '\0') 
+....................          return(0); 
+....................    return((*s1 < *s2) ? -1: 1); 
+.................... } 
+....................  
+.................... /* standard template: 
+....................    int strncmp(const char *s1, const char *s2, size_t n). 
+....................    Compares max of n characters (not following 0) from s1 to s2; 
+....................    returns same as strcmp */ 
+....................  
+.................... signed int8 strncmp(char *s1, char *s2, size_t n) 
+.................... { 
+....................    for (; n > 0; s1++, s2++, n--) 
+....................       if (*s1 != *s2) 
+....................          return((*s1 <*s2) ? -1: 1); 
+....................       else if (*s1 == '\0') 
+....................          return(0); 
+....................    return(0); 
+.................... } 
+.................... /* standard template: 
+....................    int strxfrm(const char *s1, const char *s2, size_t n). 
+....................    transforms maximum of n characters from s2 and places them into s1*/ 
+.................... size_t strxfrm(char *s1, char *s2, size_t n) 
+.................... { 
+....................   char *s; 
+....................   unsigned int8 n1; 
+....................   n1=n; 
+....................   for (s = s1; n > 0 && *s2 != '\0'; n--) 
+....................      *s++ = *s2++; 
+....................   for (; n > 0; n--) 
+....................      *s++ = '\0'; 
+....................  
+....................   return(n1); 
+.................... } 
+....................  
+....................  
+....................  
+....................  
+....................  
+.................... /***********************************************************/ 
+.................... /*Search functions*/ 
+.................... /* standard template: void *memchr(const char *s, int c). 
+....................    Finds first occurrence of c in n characters of s */ 
+....................  
+.................... char *memchr(void *s,unsigned int8 c,size_t n) 
+.................... { 
+....................    char uc; 
+....................    char *su; 
+....................    uc=c; 
+....................    for(su=s;0<n;++su,--n) 
+....................       if(*su==uc) 
+....................       return su; 
+....................    return NULL; 
+.................... } 
+....................  
+.................... /* standard template: char *strchr(const char *s, int c). 
+....................    Finds first occurrence of c in s */ 
+....................  
+.................... char *strchr(char *s, unsigned int8 c) 
+.................... { 
+....................    for (; *s != c; s++) 
+....................       if (*s == '\0') 
+....................          return(0); 
+....................    return(s); 
+.................... } 
+.................... /* standard template: 
+....................    size_t strcspn(const char *s1, const char *s2). 
+....................    Computes length of max initial segment of s1 that 
+....................    consists entirely of characters NOT from s2*/ 
+....................  
+.................... unsigned int8  strcspn(char *s1, char *s2) 
+.................... { 
+....................    char *sc1, *sc2; 
+....................  
+....................    for (sc1 = s1; *sc1 != 0; sc1++) 
+....................       for (sc2 = s2; *sc2 != 0; sc2++) 
+....................          if (*sc1 == *sc2) 
+....................             return(sc1 - s1); 
+....................    return(sc1 - s1); 
+.................... } 
+.................... /* standard template: 
+....................    char *strpbrk(const char *s1, const char *s2). 
+....................    Locates first occurence of any character from s2 in s1; 
+....................    returns s1 if s2 is empty string */ 
+....................  
+.................... char *strpbrk(char *s1, char *s2) 
+.................... { 
+....................    char *sc1, *sc2; 
+....................  
+....................    for (sc1 = s1; *sc1 != 0; sc1++) 
+....................       for (sc2 = s2; *sc2 != 0; sc2++) 
+....................          if (*sc1 == *sc2) 
+....................             return(sc1); 
+....................    return(0); 
+.................... } 
+....................  
+....................  
+.................... /* standard template: char *strrchr(const char *s, int c). 
+....................    Finds last occurrence of c in s */ 
+....................  
+.................... char *strrchr(char *s, unsigned int8 c) 
+.................... { 
+....................    char *p; 
+....................  
+....................    for (p = 0; ; s++) 
+....................    { 
+....................       if (*s == c) 
+....................          p = s; 
+....................       if (*s == '\0') 
+....................          return(p); 
+....................    } 
+.................... } 
+.................... /* computes length of max initial segment of s1 consisting 
+....................    entirely of characters from s2 */ 
+....................  
+.................... unsigned int8  strspn(char *s1, char *s2) 
+.................... { 
+....................    char *sc1, *sc2; 
+....................  
+....................    for (sc1 = s1; *sc1 != 0; sc1++) 
+....................       for (sc2 = s2; ; sc2++) 
+....................     if (*sc2 == '\0') 
+....................        return(sc1 - s1); 
+....................          else if (*sc1 == *sc2) 
+....................             break; 
+....................    return(sc1 - s1); 
+.................... } 
+.................... /* standard template: 
+....................    char *strstr(const char *s1, const char *s2); 
+....................    Locates first occurence of character sequence s2 in s1; 
+....................    returns 0 if s2 is empty string 
+....................  
+....................    Uncomment #define FASTER_BUT_MORE_ROM at the top of the 
+....................    file to use the faster algorithm */ 
+.................... char *strstr(char *s1, char *s2) 
+.................... { 
+....................    char *s, *t; 
+....................  
+....................    #ifdef FASTER_BUT_MORE_ROM 
+....................    if (*s2 == '\0') 
+....................          return(s1); 
+....................    #endif 
+....................  
+....................    while (*s1) 
+....................    { 
+....................       for(s = s1, t = s2; *t && (*s == *t); ++s, ++t); 
+....................  
+....................       if (*t == '\0') 
+....................          return s1; 
+....................       ++s1; 
+....................       #ifdef FASTER_BUT_MORE_ROM 
+....................          while(*s1 != '\0' && *s1 != *s2) 
+....................             ++s1; 
+....................       #endif 
+....................    } 
+....................    return 0; 
+.................... } 
+....................  
+.................... /* standard template: char *strtok(char *s1, const char *s2). 
+....................  
+....................    Finds next token in s1 delimited by a character from separator 
+....................    string s2 (which can be different from call to call).  First call 
+....................    starts at beginning of s1 searching for first character NOT 
+....................    contained in s2; returns 0 if none is found. 
+....................    If one is found, it is the start of first token (return value). 
+....................    Function then searches from there for a character contained in s2. 
+....................    If none is found, current token extends to end of s1, and subsequent 
+....................    searches for a token will return 0.  If one is found, it is 
+....................    overwritten by '\0', which terminates current token.  Function saves 
+....................    pointer to following character from which next search will start. 
+....................    Each subsequent call, with 0 as first argument, starts searching 
+....................    from saved pointer */ 
+....................  
+.................... char *strtok(char *s1, char *s2) 
+.................... { 
+....................    char *beg, *end; 
+....................    static char *save; 
+*
+0490:  BCF    03.5
+0491:  CLRF   20
+0492:  CLRF   21
+....................  
+....................    beg = (s1)? s1: save; 
+....................    beg += strspn(beg, s2); 
+....................    if (*beg == '\0') 
+....................    { 
+....................       *save = ' '; 
+....................       return(0); 
+....................    } 
+....................    end = strpbrk(beg, s2); 
+....................    if (*end != '\0') 
+....................    { 
+....................       *end = '\0'; 
+....................       end++; 
+....................    } 
+....................    save = end; 
+....................    return(beg); 
+.................... } 
+....................  
+.................... /*****************************************************************/ 
+.................... /*Miscellaneous functions*/ 
+.................... /* standard template 
+.................... maps error number in errnum to an error message string 
+.................... Returns: Pointer to string 
+.................... */ 
+.................... #ifdef _ERRNO 
+.................... char * strerror(unsigned int8 errnum) 
+.................... { 
+.................... static char s[13]; 
+.................... switch( errnum) 
+.................... { 
+.................... case 0: 
+....................    strcpy(s,"no errors"); 
+....................    return s; 
+.................... case EDOM : 
+....................    strcpy(s,"domain error"); 
+....................    return s; 
+.................... case ERANGE: 
+....................    strcpy(s,"range error"); 
+....................    return s; 
+.................... } 
+.................... } 
+.................... #ENDIF 
+.................... /* standard template: size_t strlen(const char *s). 
+....................    Computes length of s1 (preceding terminating 0) */ 
+....................  
+.................... unsigned int8 strlen(char *s) 
+.................... { 
+....................    char *sc; 
+....................  
+....................    for (sc = s; *sc != 0; sc++); 
+....................    return(sc - s); 
+.................... } 
+....................  
+.................... /* standard template: size_t stricmp(const char *s1, const char *s2). 
+....................    Compares s1 to s2 ignoring case (upper vs. lower) */ 
+....................  
+.................... signed int8 stricmp(char *s1, char *s2) 
+.................... { 
+....................  for(; *s1==*s2||(isalpha(*s1)&&isalpha(*s2)&&(*s1==*s2+32||*s2==*s1+32)); 
+....................     s1++, s2++) 
+....................     if (*s1 == '\0') 
+....................        return(0); 
+....................  return((*s1 < *s2) ? -1: 1); 
+.................... } 
+....................  
+....................  
+.................... /* standard template: char *strlwr(char *s). 
+....................    Replaces uppercase letters by lowercase; 
+....................    returns pointer to new string s */ 
+....................  
+.................... char *strlwr(char *s) 
+.................... { 
+....................    char *p; 
+....................  
+....................    for (p = s; *p != '\0'; p++) 
+....................       if (*p >= 'A' && *p <='Z') 
+....................          *p += 'a' - 'A'; 
+....................    return(s); 
+.................... } 
+....................  
+.................... /* standard template: char *strupr(char *s). 
+....................    Replaces lowercase letters by upercase; 
+....................    returns pointer to new string s */ 
+....................  
+.................... char *strupr(char *s) 
+.................... { 
+....................    char *p; 
+....................  
+....................    for (p = s; *p != '\0'; p++) 
+....................       if (*p >= 'a' && *p <='z') 
+....................          *p -= 'a' - 'A'; 
+....................    return(s); 
+.................... } 
+....................  
+....................  
+.................... /************************************************************/ 
+....................  
+....................  
+.................... #endif 
+....................  
+.................... #FUSES NOWDT, HS, PUT, NOPROTECT 
+.................... #use delay(CLOCK=20MHz)  
+*
+00DA:  MOVLW  64
+00DB:  MOVWF  04
+00DC:  BCF    03.7
+00DD:  MOVF   00,W
+00DE:  BTFSC  03.2
+00DF:  GOTO   0ED
+00E0:  MOVLW  06
+00E1:  MOVWF  78
+00E2:  CLRF   77
+00E3:  DECFSZ 77,F
+00E4:  GOTO   0E3
+00E5:  DECFSZ 78,F
+00E6:  GOTO   0E2
+00E7:  MOVLW  7B
+00E8:  MOVWF  77
+00E9:  DECFSZ 77,F
+00EA:  GOTO   0E9
+00EB:  DECFSZ 00,F
+00EC:  GOTO   0E0
+00ED:  RETURN
+.................... #include "D:\DoAn1\LCD.c" 
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+.................... #define lcd_rs pin_e0 
+.................... #define lcd_rw pin_e1 
+.................... #define lcd_e pin_e2 
+.................... #define output_lcd output_d 
+....................  
+.................... #define lcd_function_set 0x38 
+.................... #define lcd_display_control 0x0f 
+.................... #define lcd_clear_display 0x01 
+.................... #define lcd_entry_mode 0x06 
+.................... #DEFINE LCD_ADDR_LINE1         0X80 
+.................... #DEFINE LCD_ADDR_LINE2         0XC0 
+.................... #DEFINE LCD_ADDR_LINE3         0X94 
+.................... #DEFINE LCD_ADDR_LINE4         0XD4 
+....................  
+.................... void lcd_out(unsigned char *x) 
+.................... { 
+....................    output_lcd(x); 
+*
+00B9:  BSF    03.5
+00BA:  CLRF   08
+00BB:  BCF    03.5
+00BC:  MOVF   6C,W
+00BD:  MOVWF  08
+....................    output_high(lcd_e); delay_us(10); 
+00BE:  BSF    03.5
+00BF:  BCF    09.2
+00C0:  BCF    03.5
+00C1:  BSF    09.2
+00C2:  MOVLW  10
+00C3:  MOVWF  77
+00C4:  DECFSZ 77,F
+00C5:  GOTO   0C4
+00C6:  NOP
+....................    output_low(lcd_e); delay_us(30); 
+00C7:  BSF    03.5
+00C8:  BCF    09.2
+00C9:  BCF    03.5
+00CA:  BCF    09.2
+00CB:  MOVLW  31
+00CC:  MOVWF  77
+00CD:  DECFSZ 77,F
+00CE:  GOTO   0CD
+00CF:  GOTO   0D0
+00D0:  RETURN
+.................... } 
+.................... void lcd_command(unsigned char mdk) 
+.................... { 
+....................    output_low(lcd_rs); 
+00D1:  BSF    03.5
+00D2:  BCF    09.0
+00D3:  BCF    03.5
+00D4:  BCF    09.0
+....................    lcd_out(mdk); 
+00D5:  CLRF   6D
+00D6:  MOVF   6B,W
+00D7:  MOVWF  6C
+00D8:  CALL   0B9
+00D9:  RETURN
+.................... } 
+.................... void lcd_clear() 
+.................... { 
+....................    lcd_command(0x01);delay_ms(2); 
+*
+010A:  MOVLW  01
+010B:  MOVWF  6B
+010C:  CALL   0D1
+010D:  MOVLW  02
+010E:  MOVWF  64
+010F:  CALL   0DA
+0110:  RETURN
+.................... } 
+.................... void lcd_data(unsigned char mht) 
+.................... { 
+....................    output_high(lcd_rs); 
+*
+0123:  BSF    03.5
+0124:  BCF    09.0
+0125:  BCF    03.5
+0126:  BSF    09.0
+....................    lcd_out(mht); 
+0127:  CLRF   6D
+0128:  MOVF   67,W
+0129:  MOVWF  6C
+012A:  CALL   0B9
+012B:  RETURN
+.................... } 
+....................  
+.................... void lcd_goto_xy(signed int8 x, signed int8 y) 
+.................... { 
+....................    unsigned int8 lcd_vitri[] ={0X80, 0XC0,0X94, 0XD4}; 
+*
+0111:  MOVLW  80
+0112:  MOVWF  66
+0113:  MOVLW  C0
+0114:  MOVWF  67
+0115:  MOVLW  94
+0116:  MOVWF  68
+0117:  MOVLW  D4
+0118:  MOVWF  69
+....................    lcd_command(lcd_vitri[x]+y); 
+0119:  MOVLW  66
+011A:  ADDWF  64,W
+011B:  MOVWF  04
+011C:  BCF    03.7
+011D:  MOVF   65,W
+011E:  ADDWF  00,W
+011F:  MOVWF  6A
+0120:  MOVWF  6B
+0121:  CALL   0D1
+0122:  RETURN
+.................... } 
+.................... void lcd_setup() 
+.................... { 
+....................    output_low(lcd_e); 
+*
+00EE:  BSF    03.5
+00EF:  BCF    09.2
+00F0:  BCF    03.5
+00F1:  BCF    09.2
+....................    output_low(lcd_rs); 
+00F2:  BSF    03.5
+00F3:  BCF    09.0
+00F4:  BCF    03.5
+00F5:  BCF    09.0
+....................    output_low(lcd_rw); 
+00F6:  BSF    03.5
+00F7:  BCF    09.1
+00F8:  BCF    03.5
+00F9:  BCF    09.1
+....................    lcd_command(lcd_function_set); 
+00FA:  MOVLW  38
+00FB:  MOVWF  6B
+00FC:  CALL   0D1
+....................    lcd_command(lcd_display_control); 
+00FD:  MOVLW  0F
+00FE:  MOVWF  6B
+00FF:  CALL   0D1
+....................    lcd_command(lcd_clear_display); 
+0100:  MOVLW  01
+0101:  MOVWF  6B
+0102:  CALL   0D1
+....................    delay_ms(2); 
+0103:  MOVLW  02
+0104:  MOVWF  64
+0105:  CALL   0DA
+....................    lcd_command(lcd_entry_mode); 
+0106:  MOVLW  06
+0107:  MOVWF  6B
+0108:  CALL   0D1
+0109:  RETURN
+.................... } 
+....................  
+.................... // Chuyen doi sang mang ky tu phu hop voi ma tran phim thuc te 
+.................... unsigned char mangKyTu [] ={'1','2','3','A','4','5','6','B','7','8','9','C','*','0','#','D'}; 
+*
+0493:  MOVLW  31
+0494:  MOVWF  22
+0495:  MOVLW  32
+0496:  MOVWF  23
+0497:  MOVLW  33
+0498:  MOVWF  24
+0499:  MOVLW  41
+049A:  MOVWF  25
+049B:  MOVLW  34
+049C:  MOVWF  26
+049D:  MOVLW  35
+049E:  MOVWF  27
+049F:  MOVLW  36
+04A0:  MOVWF  28
+04A1:  MOVLW  42
+04A2:  MOVWF  29
+04A3:  MOVLW  37
+04A4:  MOVWF  2A
+04A5:  MOVLW  38
+04A6:  MOVWF  2B
+04A7:  MOVLW  39
+04A8:  MOVWF  2C
+04A9:  MOVLW  43
+04AA:  MOVWF  2D
+04AB:  MOVLW  2A
+04AC:  MOVWF  2E
+04AD:  MOVLW  30
+04AE:  MOVWF  2F
+04AF:  MOVLW  23
+04B0:  MOVWF  30
+04B1:  MOVLW  44
+04B2:  MOVWF  31
+.................... // Bien quet phim ma tran 
+.................... unsigned char key; 
+.................... //Tao 2 mang de luu thong tin tai khoan va mat khau 
+.................... unsigned char tk[8]; 
+.................... unsigned char mk[8]; 
+.................... // Bien Kiem Tra xem TK da dc nhap 
+.................... unsigned int1 isInputTK =0; 
+.................... //Bien viTriManHinh = 0: Man Hinh Dang Nhap, viTriManHinh = 1: Man hinh sau khi dang nhap thanh cong 
+.................... unsigned int8 viTriManHinh = 0; 
+.................... //Tai khoan admin, su dung con tro cho nhanh 
+.................... unsigned char *tkAdmin = "123"; 
+04B3:  MOVLW  31
+04B4:  MOVWF  47
+04B5:  MOVLW  32
+04B6:  MOVWF  48
+04B7:  MOVLW  33
+04B8:  MOVWF  49
+04B9:  CLRF   4A
+04BA:  CLRF   46
+04BB:  MOVLW  47
+04BC:  MOVWF  45
+.................... //Bien isAdmin de xac dinh xem tai khoan dang nhap co phai la admin hay la user 
+.................... unsigned int1 isAdmin =0; 
+.................... //2 bien nay dung de lam chi so index cho mang tk[] va mk[] 
+.................... unsigned int8 vitriTK =0; 
+.................... unsigned int8 vitriMK =0; 
+.................... //Bien nay dung de luu vi tri tai khoan dc chon, dung bien nay de lay mat khau 
+.................... unsigned int8 vitriTKSelected; 
+.................... // Bien nay dung trong ham xulydangNhap de xac dinh dang nhap tai khoan hay mat khau 
+.................... unsigned int8 flag=0; 
+.................... //bien nay dung de xac dinh coi co doi Mk ko 
+.................... unsigned int1 isDoiMK =0; 
+.................... //bien nay dung de xac dinh coi co tao user hay ko 
+.................... unsigned int8 isTaoTK =0; 
+.................... // 
+.................... unsigned int1 isXoaTK =0; 
+.................... // ham quet phim 
+.................... UNSIGNED char KEY_NHAN() 
+.................... {     SIGNED INT8  MAQUETCOT,MAPHIM,HANG,COT; 
+....................       MAQUETCOT = 0B11111110;   MAPHIM=HANG=0XFF; 
+*
+01B3:  MOVLW  FE
+01B4:  MOVWF  5C
+01B5:  MOVLW  FF
+01B6:  MOVWF  5E
+01B7:  MOVWF  5D
+....................       FOR(COT=0;COT<4;COT++) 
+01B8:  CLRF   5F
+01B9:  BTFSC  5F.7
+01BA:  GOTO   1BF
+01BB:  MOVF   5F,W
+01BC:  SUBLW  03
+01BD:  BTFSS  03.0
+01BE:  GOTO   1EC
+....................          {    
+....................             OUTPUT_B(MAQUETCOT);  MAQUETCOT  = (MAQUETCOT<<1) + 0x1; 
+01BF:  BSF    03.5
+01C0:  CLRF   06
+01C1:  BCF    03.5
+01C2:  MOVF   5C,W
+01C3:  MOVWF  06
+01C4:  BCF    03.0
+01C5:  RLF    5C,W
+01C6:  ADDLW  01
+01C7:  MOVWF  5C
+....................             IF         (!INPUT(PIN_B4))      {HANG=0;   BREAK;} 
+01C8:  BSF    03.5
+01C9:  BSF    06.4
+01CA:  BCF    03.5
+01CB:  BTFSC  06.4
+01CC:  GOTO   1D0
+01CD:  CLRF   5E
+01CE:  GOTO   1EC
+01CF:  GOTO   1EA
+....................             ELSE    IF (!INPUT(PIN_B5))      {HANG=1;   BREAK;} 
+01D0:  BSF    03.5
+01D1:  BSF    06.5
+01D2:  BCF    03.5
+01D3:  BTFSC  06.5
+01D4:  GOTO   1D9
+01D5:  MOVLW  01
+01D6:  MOVWF  5E
+01D7:  GOTO   1EC
+01D8:  GOTO   1EA
+....................             ELSE    IF (!INPUT(PIN_B6))      {HANG=2;   BREAK;} 
+01D9:  BSF    03.5
+01DA:  BSF    06.6
+01DB:  BCF    03.5
+01DC:  BTFSC  06.6
+01DD:  GOTO   1E2
+01DE:  MOVLW  02
+01DF:  MOVWF  5E
+01E0:  GOTO   1EC
+01E1:  GOTO   1EA
+....................             ELSE    IF (!INPUT(PIN_B7))      {HANG=3;   BREAK;} 
+01E2:  BSF    03.5
+01E3:  BSF    06.7
+01E4:  BCF    03.5
+01E5:  BTFSC  06.7
+01E6:  GOTO   1EA
+01E7:  MOVLW  03
+01E8:  MOVWF  5E
+01E9:  GOTO   1EC
+01EA:  INCF   5F,F
+01EB:  GOTO   1B9
+....................            
+....................          }           
+....................       IF (HANG!=0XFF)   MAPHIM   =mangKyTu[COT*4 + HANG]; 
+01EC:  INCFSZ 5E,W
+01ED:  GOTO   1EF
+01EE:  GOTO   21E
+01EF:  MOVF   5F,W
+01F0:  MOVWF  60
+01F1:  MOVLW  04
+01F2:  MOVWF  61
+*
+0217:  MOVF   5E,W
+0218:  ADDWF  78,W
+0219:  ADDLW  22
+021A:  MOVWF  04
+021B:  BCF    03.7
+021C:  MOVF   00,W
+021D:  MOVWF  5D
+....................       RETURN(MAPHIM); 
+021E:  MOVF   5D,W
+021F:  MOVWF  78
+0220:  RETURN
+....................   } 
+.................... // viet xuong eeprom 
+.................... void writeEEPROM(unsigned char arr[],unsigned int8 vitri) 
+.................... { 
+....................    int i; 
+....................    for(i = 0;arr[i]!='\0';i++) 
+*
+03C1:  CLRF   61
+03C2:  MOVF   61,W
+03C3:  ADDWF  5E,W
+03C4:  MOVWF  04
+03C5:  BCF    03.7
+03C6:  BTFSC  5F.0
+03C7:  BSF    03.7
+03C8:  MOVF   00,F
+03C9:  BTFSC  03.2
+03CA:  GOTO   3F1
+....................    { 
+....................       write_eeprom (vitri + i, arr[i]); 
+03CB:  MOVF   61,W
+03CC:  ADDWF  60,W
+03CD:  MOVWF  62
+03CE:  MOVF   61,W
+03CF:  ADDWF  5E,W
+03D0:  MOVWF  04
+03D1:  BCF    03.7
+03D2:  BTFSC  5F.0
+03D3:  BSF    03.7
+03D4:  MOVF   00,W
+03D5:  MOVWF  63
+03D6:  MOVF   0B,W
+03D7:  MOVWF  77
+03D8:  BCF    0B.7
+03D9:  MOVF   62,W
+03DA:  BSF    03.6
+03DB:  MOVWF  0D
+03DC:  BCF    03.6
+03DD:  MOVF   63,W
+03DE:  BSF    03.6
+03DF:  MOVWF  0C
+03E0:  BSF    03.5
+03E1:  BCF    0C.7
+03E2:  BSF    0C.2
+03E3:  MOVLW  55
+03E4:  MOVWF  0D
+03E5:  MOVLW  AA
+03E6:  MOVWF  0D
+03E7:  BSF    0C.1
+03E8:  BTFSC  0C.1
+03E9:  GOTO   3E8
+03EA:  BCF    0C.2
+03EB:  MOVF   77,W
+03EC:  BCF    03.5
+03ED:  BCF    03.6
+03EE:  IORWF  0B,F
+03EF:  INCF   61,F
+03F0:  GOTO   3C2
+....................    } 
+....................    // xoa du lieu con lai 
+....................    for(;i<8;i++) 
+03F1:  MOVF   61,W
+03F2:  SUBLW  07
+03F3:  BTFSS  03.0
+03F4:  GOTO   411
+....................    { 
+....................         write_eeprom (vitri + i,0xff); 
+03F5:  MOVF   61,W
+03F6:  ADDWF  60,W
+03F7:  MOVWF  62
+03F8:  MOVF   0B,W
+03F9:  MOVWF  77
+03FA:  BCF    0B.7
+03FB:  MOVF   62,W
+03FC:  BSF    03.6
+03FD:  MOVWF  0D
+03FE:  MOVLW  FF
+03FF:  MOVWF  0C
+0400:  BSF    03.5
+0401:  BCF    0C.7
+0402:  BSF    0C.2
+0403:  MOVLW  55
+0404:  MOVWF  0D
+0405:  MOVLW  AA
+0406:  MOVWF  0D
+0407:  BSF    0C.1
+0408:  BTFSC  0C.1
+0409:  GOTO   408
+040A:  BCF    0C.2
+040B:  MOVF   77,W
+040C:  BCF    03.5
+040D:  BCF    03.6
+040E:  IORWF  0B,F
+040F:  INCF   61,F
+0410:  GOTO   3F1
+....................    } 
+0411:  RETURN
+....................    
+.................... } 
+.................... // doc tu eeprom 
+.................... void readEEPROM(unsigned char arr[],unsigned int8 vitri) 
+.................... { 
+....................    unsigned int8 i; 
+....................    char c; 
+....................    for( i =0;i < 8;i++) 
+*
+0221:  CLRF   69
+0222:  MOVF   69,W
+0223:  SUBLW  07
+0224:  BTFSS  03.0
+0225:  GOTO   248
+....................    { 
+....................       c =   read_eeprom (vitri + i); 
+0226:  MOVF   69,W
+0227:  ADDWF  68,W
+0228:  MOVWF  6B
+0229:  MOVF   6B,W
+022A:  BSF    03.6
+022B:  MOVWF  0D
+022C:  BSF    03.5
+022D:  BCF    0C.7
+022E:  BSF    0C.0
+022F:  BCF    03.5
+0230:  MOVF   0C,W
+0231:  BCF    03.6
+0232:  MOVWF  6A
+....................       if(c == 0xff) 
+0233:  INCFSZ 6A,W
+0234:  GOTO   23E
+....................         { 
+....................          arr[i]='\0'; 
+0235:  MOVF   69,W
+0236:  ADDWF  66,W
+0237:  MOVWF  04
+0238:  BCF    03.7
+0239:  BTFSC  67.0
+023A:  BSF    03.7
+023B:  CLRF   00
+....................          return; 
+023C:  GOTO   248
+....................         } 
+023D:  GOTO   246
+....................       else 
+....................          arr[i] =c; 
+023E:  MOVF   69,W
+023F:  ADDWF  66,W
+0240:  MOVWF  04
+0241:  BCF    03.7
+0242:  BTFSC  67.0
+0243:  BSF    03.7
+0244:  MOVF   6A,W
+0245:  MOVWF  00
+0246:  INCF   69,F
+0247:  GOTO   222
+....................  
+....................    } 
+0248:  RETURN
+.................... } 
+....................  
+.................... // Man Hinh hien thi thong bao loi sai khi thong tin dang nhap sai 
+.................... void manHinhThongBaoSai() 
+.................... { 
+....................    lcd_clear(); 
+*
+02D7:  CALL   10A
+....................    lcd_goto_xy(1,0); 
+02D8:  MOVLW  01
+02D9:  MOVWF  64
+02DA:  CLRF   65
+02DB:  CALL   111
+....................    lcd_data("  Thong tin TK sai!"); 
+02DC:  MOVLW  04
+02DD:  BSF    03.6
+02DE:  MOVWF  0D
+02DF:  MOVLW  00
+02E0:  MOVWF  0F
+02E1:  BCF    03.6
+02E2:  CALL   12C
+....................    delay_ms(3000); 
+02E3:  MOVLW  0C
+02E4:  MOVWF  5C
+02E5:  MOVLW  FA
+02E6:  MOVWF  64
+02E7:  CALL   0DA
+02E8:  DECFSZ 5C,F
+02E9:  GOTO   2E5
+.................... } 
+.................... //input du lieu tu phim nhap vao Mang 
+.................... void inputData(unsigned char arr[],unsigned int8 vitri) 
+.................... { 
+....................     arr[vitri] = key; 
+*
+0379:  MOVF   60,W
+037A:  ADDWF  5E,W
+037B:  MOVWF  04
+037C:  BCF    03.7
+037D:  BTFSC  5F.0
+037E:  BSF    03.7
+037F:  MOVF   32,W
+0380:  MOVWF  00
+0381:  RETURN
+....................     
+.................... } 
+.................... // hien thi inout tk va mk 
+.................... void DisplayInputTK(unsigned char arr[]) 
+.................... { 
+....................    lcd_goto_xy(0,vitriTK+3); 
+0382:  MOVLW  03
+0383:  ADDWF  4B,W
+0384:  MOVWF  5E
+0385:  CLRF   64
+0386:  MOVF   5E,W
+0387:  MOVWF  65
+0388:  CALL   111
+....................    lcd_data(key); 
+0389:  MOVF   32,W
+038A:  MOVWF  67
+038B:  CALL   123
+....................    inputData(arr,vitriTK); 
+038C:  MOVF   5D,W
+038D:  MOVWF  5F
+038E:  MOVF   5C,W
+038F:  MOVWF  5E
+0390:  MOVF   4B,W
+0391:  MOVWF  60
+0392:  CALL   379
+0393:  RETURN
+.................... } 
+.................... void DisplayInputMK(unsigned char arr[]) 
+.................... { 
+....................    lcd_goto_xy(1,vitriMK+3); 
+0394:  MOVLW  03
+0395:  ADDWF  4C,W
+0396:  MOVWF  5E
+0397:  MOVLW  01
+0398:  MOVWF  64
+0399:  MOVF   5E,W
+039A:  MOVWF  65
+039B:  CALL   111
+....................    lcd_data('*'); 
+039C:  MOVLW  2A
+039D:  MOVWF  67
+039E:  CALL   123
+....................    inputData(arr,vitriMK); 
+039F:  MOVF   5D,W
+03A0:  MOVWF  5F
+03A1:  MOVF   5C,W
+03A2:  MOVWF  5E
+03A3:  MOVF   4C,W
+03A4:  MOVWF  60
+03A5:  CALL   379
+03A6:  RETURN
+.................... } 
+.................... // Ham Hien Thi Man Hinh Admin 
+.................... void mHAdmin() 
+.................... { 
+....................    lcd_clear(); 
+*
+02EE:  CALL   10A
+....................    lcd_goto_xy(0,0); 
+02EF:  CLRF   64
+02F0:  CLRF   65
+02F1:  CALL   111
+....................    lcd_data("1.Them tai khoan"); 
+02F2:  MOVLW  0E
+02F3:  BSF    03.6
+02F4:  MOVWF  0D
+02F5:  MOVLW  00
+02F6:  MOVWF  0F
+02F7:  BCF    03.6
+02F8:  CALL   12C
+....................    lcd_goto_xy(1,0); 
+02F9:  MOVLW  01
+02FA:  MOVWF  64
+02FB:  CLRF   65
+02FC:  CALL   111
+....................    lcd_data("2.Xoa tai khoan"); 
+02FD:  MOVLW  17
+02FE:  BSF    03.6
+02FF:  MOVWF  0D
+0300:  MOVLW  00
+0301:  MOVWF  0F
+0302:  BCF    03.6
+0303:  CALL   12C
+....................    lcd_goto_xy(2,0); 
+0304:  MOVLW  02
+0305:  MOVWF  64
+0306:  CLRF   65
+0307:  CALL   111
+....................    lcd_data("3.Doi MK  4.Exit"); 
+0308:  MOVLW  1F
+0309:  BSF    03.6
+030A:  MOVWF  0D
+030B:  MOVLW  00
+030C:  MOVWF  0F
+030D:  BCF    03.6
+030E:  CALL   12C
+....................    lcd_goto_xy(3,0); 
+030F:  MOVLW  03
+0310:  MOVWF  64
+0311:  CLRF   65
+0312:  CALL   111
+....................    lcd_data("Nhap : "); 
+0313:  MOVLW  28
+0314:  BSF    03.6
+0315:  MOVWF  0D
+0316:  MOVLW  00
+0317:  MOVWF  0F
+0318:  BCF    03.6
+0319:  CALL   12C
+031A:  RETURN
+.................... } 
+.................... // Ham hien thi man hinh user 
+.................... void mHUser() 
+.................... { 
+....................    lcd_clear(); 
+031B:  CALL   10A
+....................    lcd_goto_xy(1,0); 
+031C:  MOVLW  01
+031D:  MOVWF  64
+031E:  CLRF   65
+031F:  CALL   111
+....................    lcd_data("1.Doi mat khau"); 
+0320:  MOVLW  2C
+0321:  BSF    03.6
+0322:  MOVWF  0D
+0323:  MOVLW  00
+0324:  MOVWF  0F
+0325:  BCF    03.6
+0326:  CALL   12C
+....................    lcd_goto_xy(2,0); 
+0327:  MOVLW  02
+0328:  MOVWF  64
+0329:  CLRF   65
+032A:  CALL   111
+....................    lcd_data("2.Thoat"); 
+032B:  MOVLW  34
+032C:  BSF    03.6
+032D:  MOVWF  0D
+032E:  MOVLW  00
+032F:  MOVWF  0F
+0330:  BCF    03.6
+0331:  CALL   12C
+....................    lcd_goto_xy(3,0); 
+0332:  MOVLW  03
+0333:  MOVWF  64
+0334:  CLRF   65
+0335:  CALL   111
+....................    lcd_data("Nhap:"); 
+0336:  MOVLW  38
+0337:  BSF    03.6
+0338:  MOVWF  0D
+0339:  MOVLW  00
+033A:  MOVWF  0F
+033B:  BCF    03.6
+033C:  CALL   12C
+033D:  RETURN
+....................  
+.................... } 
+.................... // Ham reset TK va Mk sau khi dang nhap xong 
+.................... void resetTKMK() 
+.................... { 
+....................    unsigned int8 i; 
+....................    vitriTK = 0; 
+*
+02C3:  CLRF   4B
+....................    vitriMK = 0; 
+02C4:  CLRF   4C
+....................    for(i =0 ;i < 8;i++) 
+02C5:  CLRF   64
+02C6:  MOVF   64,W
+02C7:  SUBLW  07
+02C8:  BTFSS  03.0
+02C9:  GOTO   2D6
+....................    { 
+....................       tk[i] = 0; 
+02CA:  MOVLW  33
+02CB:  ADDWF  64,W
+02CC:  MOVWF  04
+02CD:  BCF    03.7
+02CE:  CLRF   00
+....................       mk[i] = 0; 
+02CF:  MOVLW  3B
+02D0:  ADDWF  64,W
+02D1:  MOVWF  04
+02D2:  BCF    03.7
+02D3:  CLRF   00
+02D4:  INCF   64,F
+02D5:  GOTO   2C6
+....................    } 
+02D6:  RETURN
+....................  
+.................... } 
+.................... // Ham check thong tin dang nhap 
+.................... unsigned int1 checkMK() 
+.................... {   
+....................    unsigned char arr[8]; 
+....................    mk[vitriMK] = '\0'; 
+*
+0344:  MOVLW  3B
+0345:  ADDWF  4C,W
+0346:  MOVWF  04
+0347:  BCF    03.7
+0348:  CLRF   00
+....................    isAdmin =0; 
+0349:  BCF    43.1
+....................    readEEPROM(arr,vitriTKSelected+8); 
+034A:  MOVLW  08
+034B:  ADDWF  4D,W
+034C:  MOVWF  64
+034D:  CLRF   67
+034E:  MOVLW  5C
+034F:  MOVWF  66
+0350:  MOVF   64,W
+0351:  MOVWF  68
+0352:  CALL   221
+....................    if(strcmp(arr,mk) == 0) 
+0353:  CLRF   67
+0354:  MOVLW  5C
+0355:  MOVWF  66
+0356:  CLRF   69
+0357:  MOVLW  3B
+0358:  MOVWF  68
+0359:  CALL   249
+035A:  MOVF   78,F
+035B:  BTFSS  03.2
+035C:  GOTO   371
+....................      { 
+....................          if(strcmp(tkAdmin,tk)==0) 
+035D:  MOVF   46,W
+035E:  MOVWF  67
+035F:  MOVF   45,W
+0360:  MOVWF  66
+0361:  CLRF   69
+0362:  MOVLW  33
+0363:  MOVWF  68
+0364:  CALL   249
+0365:  MOVF   78,F
+0366:  BTFSS  03.2
+0367:  GOTO   36B
+....................             { isAdmin = 1; 
+0368:  BSF    43.1
+....................             mHAdmin();} 
+0369:  CALL   2EE
+036A:  GOTO   36C
+....................          else 
+....................             mHUser(); 
+036B:  CALL   31B
+....................          vitriManHinh++; 
+036C:  INCF   44,F
+....................          resetTKMK(); 
+036D:  CALL   2C3
+....................          return 1; 
+036E:  MOVLW  01
+036F:  MOVWF  78
+0370:  GOTO   373
+....................      } 
+....................   return 0; 
+0371:  MOVLW  00
+0372:  MOVWF  78
+.................... } 
+.................... int8 checkTK() 
+.................... {   
+....................    unsigned char arr[8]; 
+....................    unsigned int16 i; 
+....................    tk[vitriTK] = '\0'; 
+*
+028D:  MOVLW  33
+028E:  ADDWF  4B,W
+028F:  MOVWF  04
+0290:  BCF    03.7
+0291:  CLRF   00
+....................    for(i = 0;i<256;i=i+16) 
+0292:  CLRF   65
+0293:  CLRF   64
+0294:  MOVF   65,W
+0295:  SUBLW  00
+0296:  BTFSS  03.0
+0297:  GOTO   2C0
+....................    { 
+....................       if(read_eeprom(i) == 0xff) 
+0298:  MOVF   64,W
+0299:  BSF    03.6
+029A:  MOVWF  0D
+029B:  BSF    03.5
+029C:  BCF    0C.7
+029D:  BSF    0C.0
+029E:  BCF    03.5
+029F:  MOVF   0C,W
+02A0:  SUBLW  FF
+02A1:  BTFSC  03.2
+....................          continue; 
+02A2:  GOTO   2BA
+....................       readEEPROM(arr,i); 
+02A3:  BCF    03.6
+02A4:  CLRF   67
+02A5:  MOVLW  5C
+02A6:  MOVWF  66
+02A7:  MOVF   64,W
+02A8:  MOVWF  68
+02A9:  CALL   221
+....................       if(strcmp(arr,tk) == 0) 
+02AA:  CLRF   67
+02AB:  MOVLW  5C
+02AC:  MOVWF  66
+02AD:  CLRF   69
+02AE:  MOVLW  33
+02AF:  MOVWF  68
+02B0:  CALL   249
+02B1:  MOVF   78,F
+02B2:  BTFSS  03.2
+02B3:  GOTO   2B9
+....................      { 
+....................          vitriTKSelected =i; 
+02B4:  MOVF   64,W
+02B5:  MOVWF  4D
+....................          return 1; 
+02B6:  MOVLW  01
+02B7:  MOVWF  78
+02B8:  GOTO   2C2
+02B9:  BSF    03.6
+....................      } 
+02BA:  MOVLW  10
+02BB:  BCF    03.6
+02BC:  ADDWF  64,F
+02BD:  BTFSC  03.0
+02BE:  INCF   65,F
+02BF:  GOTO   294
+....................    } 
+....................    return 0; 
+02C0:  MOVLW  00
+02C1:  MOVWF  78
+02C2:  RETURN
+.................... } 
+.................... // Man hinh giao dien dang nhap 
+.................... void manHinhDangNhap() 
+.................... { 
+....................    lcd_clear(); 
+*
+0182:  CALL   10A
+....................    lcd_goto_xy(0,0); 
+0183:  CLRF   64
+0184:  CLRF   65
+0185:  CALL   111
+....................    lcd_data("TK:"); 
+0186:  MOVLW  3B
+0187:  BSF    03.6
+0188:  MOVWF  0D
+0189:  MOVLW  00
+018A:  MOVWF  0F
+018B:  BCF    03.6
+018C:  CALL   12C
+....................    lcd_goto_xy(1,0); 
+018D:  MOVLW  01
+018E:  MOVWF  64
+018F:  CLRF   65
+0190:  CALL   111
+....................    lcd_data("MK:"); 
+0191:  MOVLW  3D
+0192:  BSF    03.6
+0193:  MOVWF  0D
+0194:  MOVLW  00
+0195:  MOVWF  0F
+0196:  BCF    03.6
+0197:  CALL   12C
+....................    lcd_goto_xy(2,0); 
+0198:  MOVLW  02
+0199:  MOVWF  64
+019A:  CLRF   65
+019B:  CALL   111
+....................    lcd_data("   Do dai max = 8"); 
+019C:  MOVLW  3F
+019D:  BSF    03.6
+019E:  MOVWF  0D
+019F:  MOVLW  00
+01A0:  MOVWF  0F
+01A1:  BCF    03.6
+01A2:  CALL   12C
+....................    lcd_goto_xy(3,0); 
+01A3:  MOVLW  03
+01A4:  MOVWF  64
+01A5:  CLRF   65
+01A6:  CALL   111
+....................    lcd_data(" Nhan D de xac nhan"); 
+01A7:  MOVLW  48
+01A8:  BSF    03.6
+01A9:  MOVWF  0D
+01AA:  MOVLW  00
+01AB:  MOVWF  0F
+01AC:  BCF    03.6
+01AD:  CALL   12C
+....................    lcd_goto_xy(0,3); 
+01AE:  CLRF   64
+01AF:  MOVLW  03
+01B0:  MOVWF  65
+01B1:  CALL   111
+01B2:  RETURN
+.................... } 
+....................  
+.................... void xulyDangNhapSai() 
+.................... { 
+....................     manHinhThongBaoSai(); 
+....................     resetTKMK(); 
+*
+02EA:  CALL   2C3
+....................     flag =0; 
+02EB:  CLRF   4E
+....................     manHinhDangNhap(); 
+02EC:  CALL   182
+02ED:  RETURN
+.................... } 
+.................... void kiemTraTKMK() 
+.................... { 
+....................    if(checkTK() == 0) 
+*
+033E:  CALL   28D
+033F:  MOVF   78,F
+0340:  BTFSS  03.2
+0341:  GOTO   344
+....................       xulyDangNhapSai(); 
+0342:  CALL   2D7
+0343:  GOTO   376
+....................    else 
+....................  { 
+....................       if(checkMK() == 0) 
+*
+0373:  MOVF   78,F
+0374:  BTFSC  03.2
+....................          xulyDangNhapSai(); 
+0375:  CALL   2D7
+....................  } 
+0376:  BCF    0A.3
+0377:  BCF    0A.4
+0378:  GOTO   4F3 (RETURN)
+.................... } 
+.................... void manHinhThemUser() 
+.................... { 
+....................    resetTKMK(); 
+*
+0453:  CALL   2C3
+....................    isTaoTK =1; 
+0454:  MOVLW  01
+0455:  MOVWF  4F
+....................    lcd_clear(); 
+0456:  CALL   10A
+....................    lcd_goto_xy(0,0);lcd_data("TK:");lcd_goto_xy(1,0);lcd_data("MK:"); 
+0457:  CLRF   64
+0458:  CLRF   65
+0459:  CALL   111
+045A:  MOVLW  52
+045B:  BSF    03.6
+045C:  MOVWF  0D
+045D:  MOVLW  00
+045E:  MOVWF  0F
+045F:  BCF    03.6
+0460:  CALL   12C
+0461:  MOVLW  01
+0462:  MOVWF  64
+0463:  CLRF   65
+0464:  CALL   111
+0465:  MOVLW  54
+0466:  BSF    03.6
+0467:  MOVWF  0D
+0468:  MOVLW  00
+0469:  MOVWF  0F
+046A:  BCF    03.6
+046B:  CALL   12C
+....................    lcd_goto_xy(2,0); lcd_data("    Tao User");lcd_goto_xy(0,3); 
+046C:  MOVLW  02
+046D:  MOVWF  64
+046E:  CLRF   65
+046F:  CALL   111
+0470:  MOVLW  56
+0471:  BSF    03.6
+0472:  MOVWF  0D
+0473:  MOVLW  00
+0474:  MOVWF  0F
+0475:  BCF    03.6
+0476:  CALL   12C
+0477:  CLRF   64
+0478:  MOVLW  03
+0479:  MOVWF  65
+047A:  CALL   111
+047B:  RETURN
+.................... } 
+.................... void manHinhXoaTaiKhoan() 
+.................... { 
+....................          isXoaTK = 1; 
+*
+0427:  BSF    43.3
+....................          vitriManHinh = 3; 
+0428:  MOVLW  03
+0429:  MOVWF  44
+....................          resetTKMK(); 
+042A:  CALL   2C3
+....................          lcd_clear(); 
+042B:  CALL   10A
+....................          lcd_goto_xy(0,0); 
+042C:  CLRF   64
+042D:  CLRF   65
+042E:  CALL   111
+....................          lcd_data("TK:"); 
+042F:  MOVLW  5D
+0430:  BSF    03.6
+0431:  MOVWF  0D
+0432:  MOVLW  00
+0433:  MOVWF  0F
+0434:  BCF    03.6
+0435:  CALL   12C
+....................          lcd_goto_xy(1,0);lcd_data("  Xoa Tai Khoan User"); 
+0436:  MOVLW  01
+0437:  MOVWF  64
+0438:  CLRF   65
+0439:  CALL   111
+043A:  MOVLW  5F
+043B:  BSF    03.6
+043C:  MOVWF  0D
+043D:  MOVLW  00
+043E:  MOVWF  0F
+043F:  BCF    03.6
+0440:  CALL   12C
+....................          lcd_goto_xy(2,0);lcd_data("Nhan D de xac nhan"); 
+0441:  MOVLW  02
+0442:  MOVWF  64
+0443:  CLRF   65
+0444:  CALL   111
+0445:  MOVLW  6A
+0446:  BSF    03.6
+0447:  MOVWF  0D
+0448:  MOVLW  00
+0449:  MOVWF  0F
+044A:  BCF    03.6
+044B:  CALL   12C
+....................          lcd_goto_xy(0,3); 
+044C:  CLRF   64
+044D:  MOVLW  03
+044E:  MOVWF  65
+044F:  CALL   111
+0450:  BCF    0A.3
+0451:  BCF    0A.4
+0452:  GOTO   552 (RETURN)
+.................... } 
+.................... void manHinhDoiMatKhau() 
+.................... { 
+....................    lcd_clear(); 
+*
+03A7:  CALL   10A
+....................    lcd_goto_xy(0,0);lcd_data("  Nhap MK moi:"); 
+03A8:  CLRF   64
+03A9:  CLRF   65
+03AA:  CALL   111
+03AB:  MOVLW  74
+03AC:  BSF    03.6
+03AD:  MOVWF  0D
+03AE:  MOVLW  00
+03AF:  MOVWF  0F
+03B0:  BCF    03.6
+03B1:  CALL   12C
+....................    lcd_goto_xy(1,0);lcd_data("MK:"); 
+03B2:  MOVLW  01
+03B3:  MOVWF  64
+03B4:  CLRF   65
+03B5:  CALL   111
+03B6:  MOVLW  7C
+03B7:  BSF    03.6
+03B8:  MOVWF  0D
+03B9:  MOVLW  00
+03BA:  MOVWF  0F
+03BB:  BCF    03.6
+03BC:  CALL   12C
+....................    isDoiMK =1; 
+03BD:  BSF    43.2
+03BE:  BCF    0A.3
+03BF:  BCF    0A.4
+03C0:  GOTO   528 (RETURN)
+.................... } 
+.................... void thongBaoDoiMKTC() 
+.................... { 
+....................     lcd_clear(); 
+*
+0412:  CALL   10A
+....................     lcd_goto_xy(1,0);lcd_data(" Doi MK thanh cong!");delay_ms(2000); 
+0413:  MOVLW  01
+0414:  MOVWF  64
+0415:  CLRF   65
+0416:  CALL   111
+0417:  MOVLW  7E
+0418:  BSF    03.6
+0419:  MOVWF  0D
+041A:  MOVLW  00
+041B:  MOVWF  0F
+041C:  BCF    03.6
+041D:  CALL   12C
+041E:  MOVLW  08
+041F:  MOVWF  5C
+0420:  MOVLW  FA
+0421:  MOVWF  64
+0422:  CALL   0DA
+0423:  DECFSZ 5C,F
+0424:  GOTO   420
+....................     isDoiMK = 0; 
+0425:  BCF    43.2
+0426:  RETURN
+.................... } 
+.................... void main() 
+*
+047C:  MOVF   03,W
+047D:  ANDLW  1F
+047E:  MOVWF  03
+047F:  BCF    43.0
+0480:  CLRF   44
+0481:  BCF    43.1
+0482:  CLRF   4B
+0483:  CLRF   4C
+0484:  CLRF   4E
+0485:  BCF    43.2
+0486:  CLRF   4F
+0487:  BCF    43.3
+0488:  BSF    03.5
+0489:  BSF    1F.0
+048A:  BSF    1F.1
+048B:  BSF    1F.2
+048C:  BCF    1F.3
+048D:  MOVLW  07
+048E:  MOVWF  1C
+048F:  BCF    03.7
+.................... {  
+....................     unsigned int16 i; 
+....................     unsigned char c; 
+....................     unsigned int1 resultTaoTK; 
+....................     unsigned char arrXoa[8] = {0,0,0,0,0,0,0,0}; 
+*
+04BD:  CLRF   54
+04BE:  CLRF   55
+04BF:  CLRF   56
+04C0:  CLRF   57
+04C1:  CLRF   58
+04C2:  CLRF   59
+04C3:  CLRF   5A
+04C4:  CLRF   5B
+....................     lcd_setup(); 
+04C5:  CALL   0EE
+....................     lcd_clear(); 
+04C6:  CALL   10A
+....................     set_tris_d(0x00); 
+04C7:  MOVLW  00
+04C8:  BSF    03.5
+04C9:  MOVWF  08
+....................     set_tris_b(0b11110000); 
+04CA:  MOVLW  F0
+04CB:  MOVWF  06
+....................     port_b_pullups(0b00001111); 
+04CC:  BCF    01.7
+....................     lcd_setup(); 
+04CD:  BCF    03.5
+04CE:  CALL   0EE
+....................     manHinhDangNhap(); 
+04CF:  CALL   182
+....................    
+.................... /*    unsigned char arr1[] ={'1','2','3','\0'}; 
+....................     writeEEPROM(arr1,0);  writeEEPROM(arr1,8); 
+....................     delay_ms(1000); 
+....................     */ 
+....................     while(true) 
+....................     { 
+....................          key = KEY_NHAN(); // quet phim 
+04D0:  CALL   1B3
+04D1:  MOVF   78,W
+04D2:  MOVWF  32
+....................          if(key!=0xff) 
+04D3:  INCFSZ 32,W
+04D4:  GOTO   4D6
+04D5:  GOTO   697
+....................          { 
+....................             delay_ms(50); // cho phim on dinh 
+04D6:  MOVLW  32
+04D7:  MOVWF  64
+04D8:  CALL   0DA
+....................             key = KEY_NHAN(); // kiem tra phim lai lan nua 
+04D9:  CALL   1B3
+04DA:  MOVF   78,W
+04DB:  MOVWF  32
+....................             if(key != 0xff) 
+04DC:  INCFSZ 32,W
+04DD:  GOTO   4DF
+04DE:  GOTO   691
+....................             { 
+....................                   // Xu ly O man hinh dang nhap 
+....................                   
+....................                   if(key == 'D' && vitriManHinh == 0) 
+04DF:  MOVF   32,W
+04E0:  SUBLW  44
+04E1:  BTFSS  03.2
+04E2:  GOTO   4F4
+04E3:  MOVF   44,F
+04E4:  BTFSS  03.2
+04E5:  GOTO   4F4
+....................                    { 
+....................                       flag = flag+1; 
+04E6:  MOVLW  01
+04E7:  ADDWF  4E,F
+....................                       if(flag == 1) lcd_goto_xy(1,3); 
+04E8:  DECFSZ 4E,W
+04E9:  GOTO   4EF
+04EA:  MOVLW  01
+04EB:  MOVWF  64
+04EC:  MOVLW  03
+04ED:  MOVWF  65
+04EE:  CALL   111
+....................                       // Bat dau kiem tra thong tin tai khoan va mat khau 
+....................                       if(flag == 2) 
+04EF:  MOVF   4E,W
+04F0:  SUBLW  02
+04F1:  BTFSC  03.2
+....................                          kiemTraTKMK(); 
+04F2:  GOTO   33E
+....................                      }        
+04F3:  GOTO   512
+....................                    else if(vitriManHinh == 0 && flag == 0) 
+04F4:  MOVF   44,F
+04F5:  BTFSS  03.2
+04F6:  GOTO   504
+04F7:  MOVF   4E,F
+04F8:  BTFSS  03.2
+04F9:  GOTO   504
+....................                        { 
+....................                               if(vitriTK < 8) 
+04FA:  MOVF   4B,W
+04FB:  SUBLW  07
+04FC:  BTFSS  03.0
+04FD:  GOTO   503
+....................                               { 
+....................                                  DisplayInputTK(tk); 
+04FE:  CLRF   5D
+04FF:  MOVLW  33
+0500:  MOVWF  5C
+0501:  CALL   382
+....................                                  vitriTK++; 
+0502:  INCF   4B,F
+....................                               }   
+....................                         } 
+0503:  GOTO   512
+....................                    else if(vitriManHinh == 0 && flag == 1) 
+0504:  MOVF   44,F
+0505:  BTFSS  03.2
+0506:  GOTO   512
+0507:  DECFSZ 4E,W
+0508:  GOTO   512
+....................                    { 
+....................                          if(vitriMK < 8) 
+0509:  MOVF   4C,W
+050A:  SUBLW  07
+050B:  BTFSS  03.0
+050C:  GOTO   512
+....................                            { 
+....................                                DisplayInputMK(mk); 
+050D:  CLRF   5D
+050E:  MOVLW  3B
+050F:  MOVWF  5C
+0510:  CALL   394
+....................                                vitriMK++; 
+0511:  INCF   4C,F
+....................                            } 
+....................                    } 
+....................                    // xuly o Man hinh user 
+....................                    if(vitriManHinh == 1 && isAdmin == 0 ) 
+0512:  DECFSZ 44,W
+0513:  GOTO   542
+0514:  BTFSC  43.1
+0515:  GOTO   542
+....................                   { 
+....................                         // Quay ve, thiet lap bien flag = 0 va vitriManHinh =0 de cho phep nhap thong tin 
+....................                          if( key == '2' && isDoiMK == 0 ) 
+0516:  MOVF   32,W
+0517:  SUBLW  32
+0518:  BTFSS  03.2
+0519:  GOTO   521
+051A:  BTFSC  43.2
+051B:  GOTO   521
+....................                         { 
+....................                            resetTKMK(); 
+051C:  CALL   2C3
+....................                            vitriManHinh =0; 
+051D:  CLRF   44
+....................                            flag =0;  
+051E:  CLRF   4E
+....................                            manHinhDangNhap(); 
+051F:  CALL   182
+....................                         } 
+0520:  GOTO   542
+....................                         // Doi Mk 
+....................                         else if(key == '1' && isDoiMK == 0) 
+0521:  MOVF   32,W
+0522:  SUBLW  31
+0523:  BTFSS  03.2
+0524:  GOTO   529
+0525:  BTFSC  43.2
+0526:  GOTO   529
+....................                         { 
+....................                               manHinhDoiMatKhau(); 
+0527:  GOTO   3A7
+....................                         } 
+0528:  GOTO   542
+....................                        else if(key == 'D' && isDoiMK == 1) 
+0529:  MOVF   32,W
+052A:  SUBLW  44
+052B:  BTFSS  03.2
+052C:  GOTO   53B
+052D:  BTFSS  43.2
+052E:  GOTO   53B
+....................                        { 
+....................                             writeEEPROM(mk,vitriTKSelected+8); 
+052F:  MOVLW  08
+0530:  ADDWF  4D,W
+0531:  MOVWF  5C
+0532:  CLRF   5F
+0533:  MOVLW  3B
+0534:  MOVWF  5E
+0535:  MOVF   5C,W
+0536:  MOVWF  60
+0537:  CALL   3C1
+....................                             thongBaoDoiMKTC(); 
+0538:  CALL   412
+....................                             mHUser(); 
+0539:  CALL   31B
+....................                        } 
+053A:  GOTO   542
+....................                        else if(isDoiMk == 1) 
+053B:  BTFSS  43.2
+053C:  GOTO   542
+....................                        { 
+....................                             DisplayInputMK(mk); 
+053D:  CLRF   5D
+053E:  MOVLW  3B
+053F:  MOVWF  5C
+0540:  CALL   394
+....................                             vitriMK++; 
+0541:  INCF   4C,F
+....................                        } 
+....................                   } 
+....................                   
+....................                 // Xu ly o Man Hinh Admin 
+....................                 if(isAdmin == 1) 
+0542:  BTFSS  43.1
+0543:  GOTO   691
+....................                       
+....................                 {    
+....................                   if(vitriManHinh == 1 && key == '2' && isXoaTK ==0 && isDoiMK == 0 && isTaoTK == 0) 
+0544:  DECFSZ 44,W
+0545:  GOTO   553
+0546:  MOVF   32,W
+0547:  SUBLW  32
+0548:  BTFSS  03.2
+0549:  GOTO   553
+054A:  BTFSC  43.3
+054B:  GOTO   553
+054C:  BTFSC  43.2
+054D:  GOTO   553
+054E:  MOVF   4F,F
+054F:  BTFSS  03.2
+0550:  GOTO   553
+....................                   { 
+....................                         manHinhXoaTaiKhoan(); 
+0551:  GOTO   427
+....................                   } 
+0552:  GOTO   5A7
+....................                   else if(vitriManHinh == 3 && key == 'D') 
+0553:  MOVF   44,W
+0554:  SUBLW  03
+0555:  BTFSS  03.2
+0556:  GOTO   59E
+0557:  MOVF   32,W
+0558:  SUBLW  44
+0559:  BTFSS  03.2
+055A:  GOTO   59E
+....................              {   
+....................                            // ko cho xoa tk admin 
+....................                            if(checkTK() && strcmp(tk,tkAdmin)) 
+055B:  CALL   28D
+055C:  MOVF   78,F
+055D:  BTFSC  03.2
+055E:  GOTO   586
+055F:  CLRF   67
+0560:  MOVLW  33
+0561:  MOVWF  66
+0562:  MOVF   46,W
+0563:  MOVWF  69
+0564:  MOVF   45,W
+0565:  MOVWF  68
+0566:  CALL   249
+0567:  MOVF   78,F
+0568:  BTFSC  03.2
+0569:  GOTO   586
+....................                            { 
+....................                                 writeEEPROM(arrXoa,vitriTKSelected); 
+056A:  CLRF   5F
+056B:  MOVLW  54
+056C:  MOVWF  5E
+056D:  MOVF   4D,W
+056E:  MOVWF  60
+056F:  CALL   3C1
+....................                                 writeEEPROM(arrXoa,vitriTKSelected+8); 
+0570:  MOVLW  08
+0571:  ADDWF  4D,W
+0572:  MOVWF  5C
+0573:  CLRF   5F
+0574:  MOVLW  54
+0575:  MOVWF  5E
+0576:  MOVF   5C,W
+0577:  MOVWF  60
+0578:  CALL   3C1
+....................                                 lcd_clear(); 
+0579:  CALL   10A
+....................                                 lcd_goto_xy(1,0);lcd_data("  Xoa thanh cong!");                         
+057A:  MOVLW  01
+057B:  MOVWF  64
+057C:  CLRF   65
+057D:  CALL   111
+057E:  MOVLW  88
+057F:  BSF    03.6
+0580:  MOVWF  0D
+0581:  MOVLW  00
+0582:  MOVWF  0F
+0583:  BCF    03.6
+0584:  CALL   12C
+....................                            } 
+0585:  GOTO   592
+....................                            else 
+....................                            { 
+....................                                 lcd_clear(); 
+0586:  CALL   10A
+....................                                 lcd_goto_xy(1,0);lcd_data("Tai Khoan ko ton tai"); 
+0587:  MOVLW  01
+0588:  MOVWF  64
+0589:  CLRF   65
+058A:  CALL   111
+058B:  MOVLW  91
+058C:  BSF    03.6
+058D:  MOVWF  0D
+058E:  MOVLW  00
+058F:  MOVWF  0F
+0590:  BCF    03.6
+0591:  CALL   12C
+....................                            } 
+....................                            vitriManHinh  =1; 
+0592:  MOVLW  01
+0593:  MOVWF  44
+....................                            delay_ms(2000); 
+0594:  MOVLW  08
+0595:  MOVWF  5C
+0596:  MOVLW  FA
+0597:  MOVWF  64
+0598:  CALL   0DA
+0599:  DECFSZ 5C,F
+059A:  GOTO   596
+....................                            isXoaTK =0; 
+059B:  BCF    43.3
+....................                            mHAdmin(); 
+059C:  CALL   2EE
+....................                   } 
+059D:  GOTO   5A7
+....................                   else if(vitriManHinh == 3) 
+059E:  MOVF   44,W
+059F:  SUBLW  03
+05A0:  BTFSS  03.2
+05A1:  GOTO   5A7
+....................                   { 
+....................                         disPlayInputTK(tk); 
+05A2:  CLRF   5D
+05A3:  MOVLW  33
+05A4:  MOVWF  5C
+05A5:  CALL   382
+....................                          vitriTK++; 
+05A6:  INCF   4B,F
+....................                   } 
+....................                   // Exit 
+....................                   if(vitriManHinh == 1 && key == '4'&& isDoiMK == 0) 
+05A7:  DECFSZ 44,W
+05A8:  GOTO   5B7
+05A9:  MOVF   32,W
+05AA:  SUBLW  34
+05AB:  BTFSS  03.2
+05AC:  GOTO   5B7
+05AD:  BTFSC  43.2
+05AE:  GOTO   5B7
+....................                   { 
+....................                       flag =0;isXoaTK =0;isDoiMK =0;isTaoTK =0; 
+05AF:  CLRF   4E
+05B0:  BCF    43.3
+05B1:  BCF    43.2
+05B2:  CLRF   4F
+....................                       resetTKMK(); 
+05B3:  CALL   2C3
+....................                       vitriManHinh =0; 
+05B4:  CLRF   44
+....................                       manHinhDangNhap(); 
+05B5:  CALL   182
+....................                   } 
+05B6:  GOTO   691
+....................                      // Xuly doi mat khau 
+....................                   else if(vitriManHinh == 1 && key == '3' && isDoiMK == 0) 
+05B7:  DECFSZ 44,W
+05B8:  GOTO   5D7
+05B9:  MOVF   32,W
+05BA:  SUBLW  33
+05BB:  BTFSS  03.2
+05BC:  GOTO   5D7
+05BD:  BTFSC  43.2
+05BE:  GOTO   5D7
+....................                   { 
+....................                      lcd_clear(); 
+05BF:  CALL   10A
+....................                      lcd_goto_xy(0,0);lcd_data("  Nhap MK moi:"); 
+05C0:  CLRF   64
+05C1:  CLRF   65
+05C2:  CALL   111
+05C3:  MOVLW  9C
+05C4:  BSF    03.6
+05C5:  MOVWF  0D
+05C6:  MOVLW  00
+05C7:  MOVWF  0F
+05C8:  BCF    03.6
+05C9:  CALL   12C
+....................                      lcd_goto_xy(1,0);lcd_data("MK:"); 
+05CA:  MOVLW  01
+05CB:  MOVWF  64
+05CC:  CLRF   65
+05CD:  CALL   111
+05CE:  MOVLW  A4
+05CF:  BSF    03.6
+05D0:  MOVWF  0D
+05D1:  MOVLW  00
+05D2:  MOVWF  0F
+05D3:  BCF    03.6
+05D4:  CALL   12C
+....................                      isDoiMK =1; 
+05D5:  BSF    43.2
+....................                   } 
+05D6:  GOTO   691
+....................                   else if(vitriManHinh == 1&& key =='D' && isDoiMK == 1 ) 
+05D7:  DECFSZ 44,W
+05D8:  GOTO   5E8
+05D9:  MOVF   32,W
+05DA:  SUBLW  44
+05DB:  BTFSS  03.2
+05DC:  GOTO   5E8
+05DD:  BTFSS  43.2
+05DE:  GOTO   5E8
+....................                   { 
+....................                      writeEEPROM(mk,8); 
+05DF:  CLRF   5F
+05E0:  MOVLW  3B
+05E1:  MOVWF  5E
+05E2:  MOVLW  08
+05E3:  MOVWF  60
+05E4:  CALL   3C1
+....................                      thongBaoDoiMKTC(); 
+05E5:  CALL   412
+....................                      mHAdmin(); 
+05E6:  CALL   2EE
+....................                   } 
+05E7:  GOTO   691
+....................                   else if(vitriManHinh == 1 && isDoiMK == 1 ) 
+05E8:  DECFSZ 44,W
+05E9:  GOTO   5F2
+05EA:  BTFSS  43.2
+05EB:  GOTO   5F2
+....................                   { 
+....................                       DisplayInputMK(mk); 
+05EC:  CLRF   5D
+05ED:  MOVLW  3B
+05EE:  MOVWF  5C
+05EF:  CALL   394
+....................                       vitriMK++; 
+05F0:  INCF   4C,F
+....................                   } 
+05F1:  GOTO   691
+....................                      // Xu ly them user 
+....................                   else if(vitriManHinh == 1 && key =='1') 
+05F2:  DECFSZ 44,W
+05F3:  GOTO   5FB
+05F4:  MOVF   32,W
+05F5:  SUBLW  31
+05F6:  BTFSS  03.2
+05F7:  GOTO   5FB
+....................                   { 
+....................                       manHinhThemUser(); 
+05F8:  CALL   453
+....................                       vitriManHinh++; 
+05F9:  INCF   44,F
+....................                   } 
+05FA:  GOTO   691
+....................                   else if(vitriManHinh == 2  && key == 'D') 
+05FB:  MOVF   44,W
+05FC:  SUBLW  02
+05FD:  BTFSS  03.2
+05FE:  GOTO   678
+05FF:  MOVF   32,W
+0600:  SUBLW  44
+0601:  BTFSS  03.2
+0602:  GOTO   678
+....................                   { 
+....................                      isTaoTK++; 
+0603:  INCF   4F,F
+....................                      if(isTaoTk == 3)  
+0604:  MOVF   4F,W
+0605:  SUBLW  03
+0606:  BTFSS  03.2
+0607:  GOTO   62F
+....................                      { 
+....................                         writeEEPROM(mk,i+8); 
+0608:  MOVLW  08
+0609:  ADDWF  50,W
+060A:  MOVWF  5C
+060B:  MOVF   51,W
+060C:  MOVWF  5D
+060D:  BTFSC  03.0
+060E:  INCF   5D,F
+060F:  CLRF   5F
+0610:  MOVLW  3B
+0611:  MOVWF  5E
+0612:  MOVF   5C,W
+0613:  MOVWF  60
+0614:  CALL   3C1
+....................                         lcd_clear();lcd_goto_xy(1,0);lcd_data(" Tao Tk thanh cong!"); delay_ms(2000); 
+0615:  CALL   10A
+0616:  MOVLW  01
+0617:  MOVWF  64
+0618:  CLRF   65
+0619:  CALL   111
+061A:  MOVLW  A6
+061B:  BSF    03.6
+061C:  MOVWF  0D
+061D:  MOVLW  00
+061E:  MOVWF  0F
+061F:  BCF    03.6
+0620:  CALL   12C
+0621:  MOVLW  08
+0622:  MOVWF  5C
+0623:  MOVLW  FA
+0624:  MOVWF  64
+0625:  CALL   0DA
+0626:  DECFSZ 5C,F
+0627:  GOTO   623
+....................                         // reset toan bo bien de tro ve man hinh admin 
+....................                         vitriManHinh = 1; 
+0628:  MOVLW  01
+0629:  MOVWF  44
+....................                         vitriMK = 0;isXoaTK =0;isDoiMK =0;isTaoTK =0; 
+062A:  CLRF   4C
+062B:  BCF    43.3
+062C:  BCF    43.2
+062D:  CLRF   4F
+....................                         mHAdmin();     
+062E:  CALL   2EE
+....................                      } 
+....................                      if(isTaoTK == 2)  
+062F:  MOVF   4F,W
+0630:  SUBLW  02
+0631:  BTFSS  03.2
+0632:  GOTO   677
+....................                     { 
+....................                      // kiem tra xem tai khoan co ton tai hay ko 
+....................                      resultTaoTK = checkTK();    
+0633:  CALL   28D
+0634:  BCF    53.0
+0635:  BTFSC  78.0
+0636:  BSF    53.0
+....................                      if(resultTaoTK == 1) 
+0637:  BTFSS  53.0
+0638:  GOTO   651
+....................                         { 
+....................                            lcd_clear();lcd_goto_xy(1,0);lcd_data("  TK da ton tai!"); delay_ms(2000); 
+0639:  CALL   10A
+063A:  MOVLW  01
+063B:  MOVWF  64
+063C:  CLRF   65
+063D:  CALL   111
+063E:  MOVLW  B0
+063F:  BSF    03.6
+0640:  MOVWF  0D
+0641:  MOVLW  00
+0642:  MOVWF  0F
+0643:  BCF    03.6
+0644:  CALL   12C
+0645:  MOVLW  08
+0646:  MOVWF  5C
+0647:  MOVLW  FA
+0648:  MOVWF  64
+0649:  CALL   0DA
+064A:  DECFSZ 5C,F
+064B:  GOTO   647
+....................                            resetTKMK(); 
+064C:  CALL   2C3
+....................                            manHinhThemUser(); 
+064D:  CALL   453
+....................                            isTaoTK = 1; 
+064E:  MOVLW  01
+064F:  MOVWF  4F
+....................                         } 
+0650:  GOTO   677
+....................                      else 
+....................                      { 
+....................                         isTaoTK = 2; 
+0651:  MOVLW  02
+0652:  MOVWF  4F
+....................                       // TIm vung nho de luu tai khoa vao 
+....................                         for(i = 16;i <256;i=i+16) 
+0653:  CLRF   51
+0654:  MOVLW  10
+0655:  MOVWF  50
+0656:  MOVF   51,W
+0657:  SUBLW  00
+0658:  BTFSS  03.0
+0659:  GOTO   66C
+....................                         { 
+....................                            c = read_eeprom(i); 
+065A:  MOVF   50,W
+065B:  BSF    03.6
+065C:  MOVWF  0D
+065D:  BSF    03.5
+065E:  BCF    0C.7
+065F:  BSF    0C.0
+0660:  BCF    03.5
+0661:  MOVF   0C,W
+0662:  BCF    03.6
+0663:  MOVWF  52
+....................                            if(c==0xff) 
+0664:  INCFSZ 52,W
+0665:  GOTO   667
+....................                               break; 
+0666:  GOTO   66C
+0667:  MOVLW  10
+0668:  ADDWF  50,F
+0669:  BTFSC  03.0
+066A:  INCF   51,F
+066B:  GOTO   656
+....................                         } 
+....................                          writeEEPROM(tk,i); 
+066C:  CLRF   5F
+066D:  MOVLW  33
+066E:  MOVWF  5E
+066F:  MOVF   50,W
+0670:  MOVWF  60
+0671:  CALL   3C1
+....................                          lcd_goto_xy(1,3); 
+0672:  MOVLW  01
+0673:  MOVWF  64
+0674:  MOVLW  03
+0675:  MOVWF  65
+0676:  CALL   111
+....................                      } 
+....................                     } 
+....................                   } 
+0677:  GOTO   691
+....................                   else if(vitriManHinh == 2 && isTaoTK==1) 
+0678:  MOVF   44,W
+0679:  SUBLW  02
+067A:  BTFSS  03.2
+067B:  GOTO   684
+067C:  DECFSZ 4F,W
+067D:  GOTO   684
+....................                   { 
+....................                      DisplayInputTK(tk); 
+067E:  CLRF   5D
+067F:  MOVLW  33
+0680:  MOVWF  5C
+0681:  CALL   382
+....................                      vitriTK++; 
+0682:  INCF   4B,F
+....................                   } 
+0683:  GOTO   691
+....................                   else if(vitriManHinh == 2 && isTaoTK==2) 
+0684:  MOVF   44,W
+0685:  SUBLW  02
+0686:  BTFSS  03.2
+0687:  GOTO   691
+0688:  MOVF   4F,W
+0689:  SUBLW  02
+068A:  BTFSS  03.2
+068B:  GOTO   691
+....................                   { 
+....................                      DisplayInputMK(mk); 
+068C:  CLRF   5D
+068D:  MOVLW  3B
+068E:  MOVWF  5C
+068F:  CALL   394
+....................                      vitriMK++; 
+0690:  INCF   4C,F
+....................                   } 
+....................                 } 
+....................             } 
+....................             while(KEY_NHAN()!=0xff);// cho buong phim 
+0691:  CALL   1B3
+0692:  INCFSZ 78,W
+0693:  GOTO   691
+....................             delay_ms(50); // cho phim on dinh 
+0694:  MOVLW  32
+0695:  MOVWF  64
+0696:  CALL   0DA
+....................          } 
+0697:  GOTO   4D0
+....................     } 
+....................  
+....................  
+.................... } 
+0698:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

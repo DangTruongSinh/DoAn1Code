@@ -1,0 +1,67 @@
+#include <16f887.h>
+#FUSES NOWDT, HS, NOPUT, NOPROTECT, NODEBUG, NOBROWNOUT, NOLVP, NOCPD, NOWRT
+#use delay(CLOCK=20MHz) 
+#include "D:\DoAn1\LCD.c"
+ unsigned int8 x = 0b11111110;
+ #bit bit1 = x.0
+ #bit bit2 =  x.1
+ #bit bit3 = x.3
+ #bit bit4 = x.4
+ 
+unsigned int8 key_nhan()
+{
+   unsigned int8 hang;
+   unsigned int8 cot; 
+   unsigned int8 maphim;
+   x = 0b11111110;
+   for(hang = 0;hang< 4;hang++)
+   {
+      output_bit(pin_b0,bit1);
+      output_bit(pin_b1,bit2);
+      output_bit(pin_b2,bit3);
+      output_bit(pin_b3,bit4);
+      if(input(pin_b4) == 0)
+      {
+         cot =0;
+         break;
+      }
+      else if(input(pin_b5) == 0)
+      {
+          cot =1;
+         break;
+      }
+      else if(input(pin_b6) == 0)
+      {
+         cot =2;
+         break;
+      }
+      else if(input(pin_b7) == 0)
+      {
+          cot =3;
+         break;
+      }
+     x = x << 1;
+     delay_ms(100);
+   }
+   maphim = hang*4 +cot;
+   return maphim;
+}
+void main()
+{
+   set_tris_b(0b11110000);
+   unsigned int8 key;
+   while(true)
+   {
+     /* key = key_nhan();
+      output_d(key);*/
+      x = 0b11111110; 
+      for(key = 0;key <=4;key++)
+      {
+         x = x << 1;
+         output_b(x);
+         delay_ms(100);
+         
+      }
+   }
+
+}

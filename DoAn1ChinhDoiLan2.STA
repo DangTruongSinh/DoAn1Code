@@ -1,0 +1,143 @@
+
+ROM used:   4388/8192 (54%)
+            5433/8192 (66%) including unused fragments
+
+            1.8 Average locations per line
+            5.2 Average locations per statement
+
+RAM used:   114/368 (31%) at main() level
+            148/368 (40%) worst case
+
+Stack used: 5 worst case (5 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  718   500  60  DoAn1ChinhDoiLan2.c
+  671     0   0  C:\Program Files (x86)\PICC\Devices\16f877a.h
+  326   128  15  C:\Program Files (x86)\PICC\Drivers\stdlibm.h
+   32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
+   76    13   2  C:\Program Files (x86)\PICC\Drivers\memmgmt.c
+  423   125  15  C:\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
+   91    29   3  LCD.c
+   70    44   5  ..\Chep Cho SV\Thu Vien\TV_PICKIT2_SHIFT_DS13B07_I2C.C
+----- -----
+ 2435   839 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+ Inline         8   150  3.6  create_node
+0     10   0    6    60  3.1  update_node
+ Inline         8   180  4.5  insert_node_after
+ Inline         8   192  3.8  remove_node
+ Inline        10   705  9.2  traverse
+ Inline        12   853 11.5  malloc
+1    283   6    7   380  6.3  free
+0     48   1    3             @I2C_READ_1
+0     52   1    1             @I2C_WRITE_1
+0     70   2    5   231  6.6  strcmp
+0     20   0    1             @delay_ms1
+0     68   2    0             @const775
+0     70   2    0             @const778
+0     24   1    2   110  1.7  lcd_out
+0     11   0    1    47  1.2  lcd_command
+0     11   0    0    32  1.0  lcd_clear
+0     11   0    1    47  1.2  lcd_data
+0     20   0    7   140  3.7  lcd_goto_xy
+0     49   1    5   276  6.2  sl
+0     39   1    2             @MUL88
+0     61   1    2   339  2.8  lcd_setup
+0     20   0    0   174  1.8  THIET_LAP_THOI_GIAN_HIEN_TAI
+0     99   2    0   253  1.4  NAP_THOI_GIAN_HTAI_VAO_DS13B07
+ Inline         0   351  1.9  DOC_THOI_GIAN_TU_REALTIME
+0     87   2    5   737  8.6  KEY_NHAN
+0     93   2    6   292  5.5  writeEEPROM
+0     44   1    7   314  7.5  readEEPROM
+ Inline         1    74  1.5  manHinhThongBaoSai
+0     10   0    0             @const858
+0    116   3    4             @PSTRINGC7_787
+0     11   0    5    63  3.0  inputData
+0     27   1    4   125  2.8  DisplayInputTK
+0     37   1    3   162  4.0  DisplayInputMK
+0     53   1    0   216  1.8  mHAdmin
+0      9   0    0             @const872
+0      8   0    0             @const873
+0      9   0    0             @const874
+0      4   0    0             @const875
+0     41   1    0   158  1.7  mHUser
+0      8   0    0             @const877
+0      4   0    0             @const878
+0      3   0    0             @const879
+0     22   1    3   187  3.6  resetTKMK
+ Inline        10   877  5.3  checkMK
+0     64   1   12   379  6.3  checkTK
+0     59   1    0   253  1.8  manHinhDangNhap
+0      2   0    0             @const888
+0      2   0    0             @const889
+0      9   0    0             @const890
+0     10   0    0             @const891
+0     29   1    0    21  1.0  xulyDangNhapSai
+0    229   5    1    74  2.6  kiemTraTKMK
+0     47   1    0   209  1.7  manHinhThemUser
+0      2   0    0             @const895
+0      2   0    0             @const896
+0      7   0    0             @const897
+ Inline         0    69  1.4  manHinhXoaTaiKhoan
+0      2   0    0             @const899
+1     39   1    0   104  1.6  manHinhDoiMatKhau
+0      8   0    0             @const901
+0      2   0    0             @const902
+1     34   1    1    74  1.5  thongBaoDoiMKTC
+0     10   0    0             @const904
+0     76   2    2   588  7.2  xuLyInputTK
+0     69   2    1   527  7.1  xulyInputMK
+0      8   0    0    57  1.5  thietLapAdmin1
+0     22   1    0    57  1.5  thietLapAdmin2
+1     45   1    0   165  2.1  thietLapAdmin3
+0      8   0    0             @const911
+0      2   0    0             @const912
+1     10   0    0    76  1.6  backAdmin
+1    353   8    4   280  6.0  readAllEpprom
+ Inline         4   169  5.0  hienthi
+1    158   4    5   465  5.6  hienThiNDungCtRaLCD
+1     23   1    3             @DIV88
+0      1   0    0             @const927
+0      2   0    0             @const928
+1     66   2    1   446  6.0  xuLyXemThem
+0     10   0    0             @const931
+2   1337  30    6 10276 11.6  MAIN
+0     11   0    0             @const940
+0     10   0    0             @const942
+0      3   0    0             @const943
+0      2   0    0             @const944
+0     11   0    0             @const945
+0      9   0    0             @const946
+0     10   0    0             @const947
+0      9   0    0             @const948
+0      9   0    0             @const949
+0     11   0    0             @const950
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               48
+    Statements              839
+    Comments                409
+    Volume (V)              37079
+    Difficulty (D)          187.2
+    Effort to implement (E) 6941420
+    Time to implement (T)   107 hours, 7 minutes
+    Est Delivered Bugs (B)  12
+    Cyclomatic Complexity   99
+    Maintainability (MI)    41
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  2036  8  
+00800-00FFF  1011  1037  
+01000-017FF  1337  711  
+01800-01FFF     0  2048  
+
+
+

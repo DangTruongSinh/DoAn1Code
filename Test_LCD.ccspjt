@@ -1,0 +1,24 @@
+[PROJECT]
+Target=Test_LCD.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Test_LCD.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[Test_LCD.c]
+Type=4
+[mru-list]
+1=Test_LCD.c
+[Opened Files]
+1=..\Chep Cho SV\Thu Vien\TV_PICKIT2_SHIFT_DS13B07_I2C.C
+2=..\Chep Cho SV\Thu Vien\TV_PICKIT2_SHIFT_1.c
+3=Test_LCD.c
+4=..\Chep Cho SV\Thu Vien\TV_PICKIT2_SHIFT_LCD.c
+5=..\Code PIC\New folder\main.c
+6=
+7=
+[Units]
+Count=1
+1=Test_LCD (main)

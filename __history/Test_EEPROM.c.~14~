@@ -1,0 +1,20 @@
+#include <16f877a.h>
+#FUSES NOWDT, HS, NOPUT, NOPROTECT, NODEBUG, NOBROWNOUT, NOLVP, NOCPD, NOWRT
+#use delay(CLOCK=20MHz) 
+#include "D:\DoAn1\LCD.c"
+void main()
+{
+  /* write_eeprom(0,'1');
+   delay_ms(300);*/
+   char c = read_eeprom(0);
+   lcd_setup();
+   lcd_goto_xy(0,0);
+   lcd_clear();
+   lcd_data("sinh");
+   lcd_data(c);
+   while(true)
+   {
+      output_high(pin_c4);
+      
+   }
+}

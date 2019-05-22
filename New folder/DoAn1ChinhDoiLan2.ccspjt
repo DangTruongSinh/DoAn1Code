@@ -1,0 +1,28 @@
+[PROJECT]
+Target=DoAn1ChinhDoiLan2.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=DoAn1ChinhDoiLan2.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[DoAn1ChinhDoiLan2.c]
+Type=4
+[mru-list]
+1=DoAn1ChinhDoiLan2.c
+[Opened Files]
+1=DoAn1ChinhDoiLan2.c
+2=..\..\Chep Cho SV\Thu Vien\TV_PICKIT2_SHIFT_DS13B07_I2C.C
+3=
+4=C:\Program Files (x86)\PICC\Drivers\lcd420.c
+5=..\..\Code PIC\RTOS.c
+6=..\..\Code PIC\TEST_REALTIME.c
+7=..\..\Code PIC\dsa.c
+8=..\..\Chep Cho SV\Thu Vien\TV_PICKIT2_SHIFT_DS13B07_I2C.C
+9=..\DoAn1ChinhDoiLan2.c
+10=DoAn1ChinhDoiLan2.c
+11=
+[Units]
+Count=1
+1=DoAn1ChinhDoiLan2 (main)

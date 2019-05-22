@@ -1,0 +1,111 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     NAM_DS13
+022     THANG_DS13
+023     NGAY_DS13
+024     THU_DS13
+025     GIO_DS13
+026     PHUT_DS13
+027     GIAY_DS13
+028     MA_DS13
+029     CONTROL_DS13
+02A     GIAYTAM
+02B     MAIN.key
+02C     lcd_goto_xy.x
+02C     lcd_setup.n
+02C     @I2C_READ_1.P1
+02C     @DIVS88.P2
+02C     @I2C_WRITE_1.P3
+02C     MAIN.@SCRATCH1
+02C     @PSTRINGC7_652.@SCRATCH1
+02D     @delay_ms1.P1
+02D     @DIVS88.P2
+02D     lcd_goto_xy.y
+02D     @I2C_READ_1.@SCRATCH1
+02D     lcd_setup.@SCRATCH1
+02D     @PSTRINGC7_652.@SCRATCH2
+02E-031 lcd_goto_xy.lcd_vitri
+02E     @I2C_READ_1.@SCRATCH2
+02E     @PSTRINGC7_652.@SCRATCH3
+02E     @DIVS88.@SCRATCH1
+02F     lcd_data.mht
+02F     @PSTRINGC7_652.@SCRATCH4
+02F     @DIVS88.@SCRATCH2
+032     lcd_goto_xy.@SCRATCH1
+033     lcd_command.mdk
+034-035 lcd_out.x
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_MA_8DOAN.call
+000008  LCD_MA_8DOAN.data
+000048  @const676.call
+00004B  @const678.call
+00004D  @const680.call
+000050  lcd_out
+000068  lcd_command
+000071  @delay_ms1
+000085  lcd_data
+00008E  lcd_setup
+0000BB  lcd_clear
+0000C4  @PSTRINGC7_652
+00011A  lcd_goto_xy
+00012E  THIET_LAP_THOI_GIAN_HIEN_TAI
+000142  @I2C_WRITE_1
+00019E  NAP_THOI_GIAN_HTAI_VAO_DS13B07
+0001FF  @I2C_READ_1
+000253  DOC_THOI_GIAN_TU_REALTIME
+0002EC  @DIVS88
+000311  MAIN
+000311  @cinit1
+00031D  @cinit2
+
+Project Directory:
+    D:\DoAn1\
+
+Project Files:
+    Test_LCD.c                                              [27-Mar-19 22:29  CRC=656113DF]
+    C:\Program Files (x86)\PICC\Devices\16f877a.h           [12-Nov-13 14:35  CRC=81334808]
+    ..\Chep Cho SV\Thu Vien\TV_PICKIT2_SHIFT_DS13B07_I2C.C  [27-Mar-19 18:14  CRC=D09E712E]
+    LCD.c                                                   [18-Mar-19 22:36  CRC=886A6880]
+
+Source signature=C8079E15
+
+Units:
+    Test_LCD (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   Test_LCD.xsym
+    Errors:      Test_LCD.err
+    Ext Symbols: Test_LCD.esym
+    INHX8:       Test_LCD.hex
+    Symbols:     Test_LCD.sym
+    List:        Test_LCD.lst
+    Debug/COFF:  Test_LCD.cof
+    Project:     Test_LCD.ccspjt
+    Call Tree:   Test_LCD.tre
+    Statistics:  Test_LCD.STA

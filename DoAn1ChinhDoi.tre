@@ -1,0 +1,257 @@
+ÀÄDoAn1ChinhDoi
+   ÀÄMAIN  0/541  Ram=14
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄlcd_setup  0/28  Ram=0
+      ³  ÃÄlcd_command  0/9  Ram=1
+      ³  ³  ÀÄlcd_out  0/24  Ram=2
+      ³  ÃÄlcd_command  0/9  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_command  0/9  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÀÄlcd_command  0/9  Ram=1
+      ³     ÀÄ*
+      ÃÄlcd_clear  0/7  Ram=0
+      ³  ÃÄlcd_command  0/9  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄlcd_setup  0/28  Ram=0
+      ³  ÀÄ*
+      ÃÄmanHinhDangNhap  0/49  Ram=0
+      ³  ÃÄlcd_clear  0/7  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄlcd_command  0/9  Ram=1
+      ³  ³     ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÃÄlcd_data  0/9  Ram=1
+      ³  ³  ³  ÀÄlcd_out  0/24  Ram=2
+      ³  ³  ÀÄlcd_data  0/9  Ram=1
+      ³  ³     ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_goto_xy  0/18  Ram=7
+      ³     ÀÄ*
+      ÃÄKEY_NHAN  0/110  Ram=5
+      ³  ÀÄ@MUL88  (Inline)  Ram=2
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄKEY_NHAN  0/110  Ram=5
+      ³  ÀÄ*
+      ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ÀÄ*
+      ÃÄkiemTraTKMK  0/59  Ram=1
+      ³  ÃÄcheckTK  0/54  Ram=12
+      ³  ³  ÃÄreadEEPROM  0/40  Ram=7
+      ³  ³  ÀÄstrcmp  0/68  Ram=5
+      ³  ÃÄxulyDangNhapSai  0/23  Ram=0
+      ³  ³  ÃÄmanHinhThongBaoSai  (Inline)  Ram=1
+      ³  ³  ³  ÃÄlcd_clear  0/7  Ram=0
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ³  ³  ÃÄresetTKMK  0/20  Ram=3
+      ³  ³  ÀÄmanHinhDangNhap  0/49  Ram=0
+      ³  ³     ÀÄ*
+      ³  ÃÄcheckMK  (Inline)  Ram=10
+      ³  ³  ÃÄreadEEPROM  0/40  Ram=7
+      ³  ³  ÃÄstrcmp  0/68  Ram=5
+      ³  ³  ÃÄstrcmp  0/68  Ram=5
+      ³  ³  ÃÄmHAdmin  0/45  Ram=0
+      ³  ³  ³  ÃÄlcd_clear  0/7  Ram=0
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÃÄmHUser  0/35  Ram=0
+      ³  ³  ³  ÃÄlcd_clear  0/7  Ram=0
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÀÄresetTKMK  0/20  Ram=3
+      ³  ÀÄxulyDangNhapSai  0/23  Ram=0
+      ³     ÀÄ*
+      ÃÄDisplayInputTK  0/18  Ram=3
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_data  0/9  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄinputData  0/9  Ram=5
+      ÃÄDisplayInputMK  0/19  Ram=3
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_data  0/9  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄinputData  0/9  Ram=5
+      ÃÄresetTKMK  0/20  Ram=3
+      ÃÄmanHinhDangNhap  0/49  Ram=0
+      ³  ÀÄ*
+      ÃÄmanHinhDoiMatKhau  0/26  Ram=0
+      ³  ÃÄlcd_clear  0/7  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÀÄ@PSTRINGC7_721  0/86  Ram=4
+      ³     ÀÄ*
+      ÃÄwriteEEPROM  0/81  Ram=6
+      ÃÄthongBaoDoiMKTC  0/21  Ram=1
+      ³  ÃÄlcd_clear  0/7  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄmHUser  0/35  Ram=0
+      ³  ÀÄ*
+      ÃÄDisplayInputMK  0/19  Ram=3
+      ³  ÀÄ*
+      ÃÄmanHinhXoaTaiKhoan  0/44  Ram=0
+      ³  ÃÄresetTKMK  0/20  Ram=3
+      ³  ÃÄlcd_clear  0/7  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_goto_xy  0/18  Ram=7
+      ³     ÀÄ*
+      ÃÄcheckTK  0/54  Ram=12
+      ³  ÀÄ*
+      ÃÄstrcmp  0/68  Ram=5
+      ÃÄwriteEEPROM  0/81  Ram=6
+      ÃÄwriteEEPROM  0/81  Ram=6
+      ÃÄlcd_clear  0/7  Ram=0
+      ³  ÀÄ*
+      ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ÀÄ*
+      ÃÄlcd_clear  0/7  Ram=0
+      ³  ÀÄ*
+      ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄmHAdmin  0/45  Ram=0
+      ³  ÀÄ*
+      ÃÄDisplayInputTK  0/18  Ram=3
+      ³  ÀÄ*
+      ÃÄresetTKMK  0/20  Ram=3
+      ÃÄmanHinhDangNhap  0/49  Ram=0
+      ³  ÀÄ*
+      ÃÄlcd_clear  0/7  Ram=0
+      ³  ÀÄ*
+      ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ÀÄ*
+      ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ÀÄ*
+      ÃÄwriteEEPROM  0/81  Ram=6
+      ÃÄthongBaoDoiMKTC  0/21  Ram=1
+      ³  ÀÄ*
+      ÃÄmHAdmin  0/45  Ram=0
+      ³  ÀÄ*
+      ÃÄDisplayInputMK  0/19  Ram=3
+      ³  ÀÄ*
+      ÃÄmanHinhThemUser  0/41  Ram=0
+      ³  ÃÄresetTKMK  0/20  Ram=3
+      ³  ÃÄlcd_clear  0/7  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_goto_xy  0/18  Ram=7
+      ³     ÀÄ*
+      ÃÄwriteEEPROM  0/81  Ram=6
+      ÃÄlcd_clear  0/7  Ram=0
+      ³  ÀÄ*
+      ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄmHAdmin  0/45  Ram=0
+      ³  ÀÄ*
+      ÃÄcheckTK  0/54  Ram=12
+      ³  ÀÄ*
+      ÃÄlcd_clear  0/7  Ram=0
+      ³  ÀÄ*
+      ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_721  0/86  Ram=4
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄresetTKMK  0/20  Ram=3
+      ÃÄmanHinhThemUser  0/41  Ram=0
+      ³  ÀÄ*
+      ÃÄwriteEEPROM  0/81  Ram=6
+      ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ÀÄ*
+      ÃÄDisplayInputTK  0/18  Ram=3
+      ³  ÀÄ*
+      ÃÄDisplayInputMK  0/19  Ram=3
+      ³  ÀÄ*
+      ÃÄKEY_NHAN  0/110  Ram=5
+      ³  ÀÄ*
+      ÀÄ@delay_ms1  0/20  Ram=1

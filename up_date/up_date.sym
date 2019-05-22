@@ -1,0 +1,144 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     c_g
+022     dv_g
+023     c_p
+024     dv_p
+025     c_h
+026     dv_h
+027     thu
+028     c_d
+029     dv_d
+02A     c_t
+02B     dv_t
+02C     c_n
+02D     dv_n
+02E-034 mang_tg_rtc
+035     h1
+036     p1
+037     g1
+038     dang_bao_thuc
+039     LCD_SetPosition.cX
+039     MAIN.nho_giay
+03A     rtc_init.a
+03A     chinh_gio.mode
+03A     chinh_bt.mode
+03A     MAIN.@SCRATCH1
+03B     chinh_bt.i
+03B     chinh_gio.i
+03B     rtc_init.@SCRATCH1
+03C     hienthi2.m
+03C     chinh_gio.t
+03C     chinh_bt.@SCRATCH1
+03D     @MUL88.P1
+03D-03E ReadRTC.buff
+03D     hienthi1.m
+03D-03E WriteRTC.buff
+03D     @DIV88.P1
+03D     hienthi2.@SCRATCH1
+03D     chinh_gio.@SCRATCH1
+03E     @DIV88.P1
+03E     @MUL88.P2
+03E     hienthi1.@SCRATCH1
+03E     @PSTRINGC7_629.@SCRATCH1
+03F     @PSTRINGC7_629.@SCRATCH2
+03F     @DIV88.@SCRATCH1
+03F     ReadRTC.@SCRATCH1
+03F     WriteRTC.@SCRATCH1
+040     @I2C_WRITE_1.P1
+040     @PSTRINGC7_629.@SCRATCH3
+040     ReadRTC.@SCRATCH2
+041     @I2C_READ_1.P1
+041     LCD_PutChar.cX
+041     @PSTRINGC7_629.@SCRATCH4
+042     LCD_PutCmd.cX
+042     @I2C_READ_1.@SCRATCH1
+043     @delay_ms1.P1
+043     LCD_SetData.cX
+043     @I2C_READ_1.@SCRATCH2
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const664.call
+000008  @const671.call
+00000B  @const672.call
+00000E  @const679.call
+000011  @const682.call
+000014  @const691.call
+000017  @const696.call
+00001F  @const697.call
+000024  @const703.call
+00002E  LCD_SetData
+000055  @delay_ms1
+000069  LCD_PulseEnable
+00007A  LCD_PutCmd
+000085  LCD_Init
+0000A7  @I2C_WRITE_1
+0000F1  @I2C_READ_1
+000136  rtc_init
+0001CA  LCD_PutChar
+0001D6  @PSTRINGC7_629
+00022C  ReadRTC
+0002F0  convert_bcd
+00031D  hienthi1
+0003CE  @MUL88
+0003F3  @DIV88
+000408  chinh_gio
+0005F9  WriteRTC
+00069B  @goto10953
+0006A5  @goto10993
+0006AF  hienthi2
+000722  chinh_bt
+000800  MAIN
+000800  @cinit1
+000810  @cinit2
+
+Project Directory:
+    D:\DoAn1\up_date\
+
+Project Files:
+    up_date.c                                               [27-Mar-19 19:44  CRC=4C8F1EC0]
+    C:\Program Files (x86)\PICC\Devices\16F877A.h           [12-Nov-13 14:35  CRC=81334808]
+    LCD 4 bit.c                                             [28-Mar-19 16:01  CRC=1023C04A]
+    C:\Program Files (x86)\PICC\Drivers\stddef.h            [16-Jul-10 09:27  CRC=897CEC6C]
+
+Source signature=F0DFFFEA
+
+Units:
+    up_date (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   up_date.xsym
+    Errors:      up_date.err
+    Ext Symbols: up_date.esym
+    INHX8:       up_date.hex
+    Symbols:     up_date.sym
+    List:        up_date.lst
+    Debug/COFF:  up_date.cof
+    Project:     up_date.ccspjt
+    Call Tree:   up_date.tre
+    Statistics:  up_date.STA

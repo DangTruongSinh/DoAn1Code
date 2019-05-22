@@ -1,0 +1,67 @@
+
+ROM used:   973/8192 (12%)
+            973/8192 (12%) including unused fragments
+
+            1.1 Average locations per line
+            7.5 Average locations per statement
+
+RAM used:   17/368 (5%) at main() level
+            27/368 (7%) worst case
+
+Stack used: 3 worst case (3 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   57    56  43  Test_LCD.c
+  671     0   0  C:\Program Files (x86)\PICC\Devices\16f877a.h
+   87    44  34  ..\Chep Cho SV\Thu Vien\TV_PICKIT2_SHIFT_DS13B07_I2C.C
+   91    29  22  LCD.c
+----- -----
+  906   129 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     20   2    1             @delay_ms1
+0     84   9    3             @I2C_READ_1
+0     92   9    1             @I2C_WRITE_1
+0     20   2    0   174  1.8  THIET_LAP_THOI_GIAN_HIEN_TAI
+0     97  10    0   253  1.4  NAP_THOI_GIAN_HTAI_VAO_DS13B07
+0    153  16    0   351  1.9  DOC_THOI_GIAN_TU_REALTIME
+0     68   7    0    72  1.2  @const640
+0     24   2    2   110  1.7  lcd_out
+0      9   1    1    47  1.2  lcd_command
+0      9   1    0    32  1.0  lcd_clear
+0      9   1    1    47  1.2  lcd_data
+0     20   2    7   140  3.7  lcd_goto_xy
+0     45   5    2   317  3.7  lcd_setup
+0    188  19    1  1087  3.9  MAIN
+0      3   0    0             @const676
+0     86   9    4             @PSTRINGC7_652
+0      2   0    0             @const678
+0      3   0    0             @const680
+0     37   4    4             @DIVS88
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               11
+    Statements              129
+    Comments                157
+    Volume (V)              4133
+    Difficulty (D)          22.3
+    Effort to implement (E) 92018
+    Time to implement (T)   1 hours, 25 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   1
+    Maintainability (MI)    79
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   969  1075  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

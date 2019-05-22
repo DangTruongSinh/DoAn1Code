@@ -1,0 +1,23 @@
+[PROJECT]
+Target=Test_EEPROM.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Test_EEPROM.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[Test_EEPROM.c]
+Type=4
+[mru-list]
+1=Test_EEPROM.c
+[Opened Files]
+1=LCD.c
+2=Test_LCD.c
+3=DoAn1.c
+4=DoAn1ChinhDoi.c
+5=Test_EEPROM.c
+6=
+[Units]
+Count=1
+1=Test_EEPROM (main)

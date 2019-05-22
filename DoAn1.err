@@ -1,0 +1,4 @@
+>>> Warning 202 "DoAn1.c" Line 356(20,21): Variable never used:   i
+      Memory usage:   ROM=20%      RAM=10% - 18%
+      0 Errors,  1 Warnings.
+Build Successful.

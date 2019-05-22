@@ -1,0 +1,4 @@
+>>> Warning 202 "D:\Chep Cho SV\Thu Vien\TV_PICKIT2_SHIFT_DS13B07_I2C.C" Line 15(60,67): Variable never used:   GIAYTAM
+      Memory usage:   ROM=54%      RAM=31% - 40%
+      0 Errors,  1 Warnings.
+Build Successful.

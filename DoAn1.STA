@@ -1,0 +1,107 @@
+
+ROM used:   1598/8192 (20%)
+            1598/8192 (20%) including unused fragments
+
+            0.5 Average locations per line
+            2.5 Average locations per statement
+
+RAM used:   36/368 (10%) at main() level
+            67/368 (18%) worst case
+
+Stack used: 6 worst case (6 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  419   258  41  DoAn1.c
+  671     0   0  C:\Program Files (x86)\PICC\Devices\16f877a.h
+ 1351   359  56  C:\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
+  423     0   0  C:\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
+   52    20   3  LCD.c
+----- -----
+ 2976   637 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     68   4    5   231  6.6  strcmp
+ Inline         2             @MUL88
+0     20   1    1             @delay_ms1
+0     24   2    2   110  1.7  lcd_out
+0      9   1    1    47  1.2  lcd_command
+0      7   0    0    32  1.0  lcd_clear
+0      9   1    1    47  1.2  lcd_data
+0     18   1    7   140  3.7  lcd_goto_xy
+0     30   2    0   149  1.3  lcd_setup
+0    106   7    5   720  8.1  KEY_NHAN
+ Inline         2    43  1.8  resetTK
+0      7   0    2    43  1.8  resetMK
+0      8   1    0    21  1.0  resetTKMK
+0     20   1    1    74  1.5  mHThongBaoSai
+0     10   1    0             @const926
+0     86   5    4             @PSTRINGC7_899
+0     23   1    0    90  1.5  hienThiTTPhu
+0      9   1    0             @const929
+0     11   1    0             @const930
+0     19   1    0   121  2.0  mHTaiKhoan
+0      2   0    0             @const932
+0     13   1    0    69  1.4  mHMatKhau
+0      2   0    0             @const934
+0     81   5    6   279  5.3  writeEEPROM
+0     40   3    7   296  7.0  readEEPROM
+0     35   2    0   158  1.7  mHUser
+0      8   1    0             @const947
+0      4   0    0             @const948
+0      3   0    0             @const949
+0     79   5   12   613  7.2  checkTK
+0     45   3    0   216  1.8  mHAdmin
+0      9   1    0             @const956
+0      8   1    0             @const957
+0      9   1    0             @const958
+0      4   0    0             @const959
+0     38   2   10   320  5.5  checkMatKhau
+ Inline         6   255  5.8  inputData
+0      1   0    0             @const967
+ Inline         6   189  4.5  inputTK
+0     27   2    0   136  1.6  mHDoiMatKhau
+0      9   1    0             @const974
+0      2   0    0             @const975
+ Inline         0   193  1.7  mHTaoTaiKhoan
+0     10   1    0             @const977
+0      2   0    0             @const978
+0      2   0    0             @const979
+ Inline        17   679  7.2  themUser
+0    184  12    1   578  4.3  xulyManHinhAdmin
+0     55   3    1   193  3.5  mHXuLyDoiMKUser
+0    149   9    1   410  3.6  mHXuLyTaoTK
+0     11   1    0   415  3.6  @const991
+0     11   1    0             @const992
+0      9   1    0             @const993
+0     37   2    1   211  3.9  xulyDoiMK
+0     10   1    0  1305  5.9  @const995
+0    211  13    1  1337  5.9  MAIN
+ Inline         0  1305  5.9  @cinit1
+
+Program metrics:
+    Functions               34
+    Statements              637
+    Comments                659
+    Volume (V)              20254
+    Difficulty (D)          120.3
+    Effort to implement (E) 2435829
+    Time to implement (T)   37 hours, 35 minutes
+    Est Delivered Bugs (B)  6
+    Cyclomatic Complexity   71
+    Maintainability (MI)    115
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1594  450  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

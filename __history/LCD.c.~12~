@@ -1,0 +1,87 @@
+#define lcd_rs pin_e0
+#define lcd_rw pin_e1
+#define lcd_e pin_e2
+#define output_lcd output_d
+#define lcd_function_set 0x38
+#define lcd_display_control 0x0f
+#define lcd_clear_display 0x01
+#define lcd_entry_mode 0x06
+#DEFINE LCD_ADDR_LINE1         0X80
+#DEFINE LCD_ADDR_LINE2         0XC0
+#DEFINE LCD_ADDR_LINE3         0X94
+#DEFINE LCD_ADDR_LINE4         0XD4
+
+CONST UNSIGNED CHAR LCD_MA_8DOAN[] = {
+   0x07,0x0F,0x1F,0x1F,0x1F,0x1F,0x1F,0x1F,  //DOAN F - 0
+   0x1F,0x1F,0x1F,0X00,0X00,0X00,0X00,0X00,  //DOAN A - 1
+   0x1C,0x1E,0x1F,0x1F,0x1F,0x1F,0x1F,0x1F,  //DOAN B - 2
+   0X00,0X00,0X00,0X00,0X00,0x1F,0x1F,0x1F,  //DOAN D - 3
+   0x1F,0x1F,0x1F,0x1F,0x1F,0x1F,0x1E,0x1C,  //DOAN C - 4
+   0x1F,0x1F,0x1F,0x1F,0x1F,0x1F,0x0F,0x07,  //DOAN E - 5
+   0x1F,0x1F,0x1F,0X00,0X00,0X00,0x1F,0x1F,  //DOAN G+D-6 
+   0x1F,0x1F,0x1F,0x1F,0x1F,0x1F,0x1F,0x1F}; //DOAN I  -7
+   
+CONST UNSIGNED CHAR LCD_SO_X[11][6] ={
+                  0,1,2,5,3,4,               // SO 0
+                  1,2,32,3,7,3,              // SO 1
+                  6,6,2,5,3,3,               // SO 2
+                  6,6,2,3,3,4,               // SO 3
+                  7,3,7,32,32,7,             // SO 4
+                  7,6,6,3,3,4,               // SO 5
+                  0,6,6,5,3,4,               // SO 6
+                  1,1,7,32,32,7,             // SO 7
+                  0,6,2,5,3,4,               // SO 8
+                  0,6,2,3,3,4
+                  32,32,32,32,32,32
+                  };             // SO 9
+
+void lcd_out(unsigned char *x)
+{
+   output_lcd(x);
+   output_high(lcd_e); delay_us(10);
+   output_low(lcd_e); delay_us(30);
+}
+void lcd_command(unsigned char mdk)
+{
+   output_low(lcd_rs);
+   lcd_out(mdk);
+}
+void lcd_clear()
+{
+   lcd_command(0x01);delay_ms(2);
+}
+void lcd_data(unsigned char *mht)
+{
+   output_high(lcd_rs);
+   lcd_out(mht);
+}
+
+void lcd_goto_xy(signed int8 x, signed int8 y)
+{
+   unsigned int8 lcd_vitri[] ={0X80, 0XC0,0X94, 0XD4};
+   lcd_command(lcd_vitri[x]+y);
+}
+ void sl(int8 so, int8 x, int8 y)
+{
+      int8 n;
+      LCD_GOTO_XY(X,Y);
+      for(n=0;n<6;n++)
+      {
+            if(n==3) LCD_GOTO_XY(X+1,Y);
+            LCD_DATA(LCD_SO_X[so][n]);       
+      }
+}
+void lcd_setup()
+{
+   unsigned int8 n;
+   output_low(lcd_e);
+   output_low(lcd_rs);
+   output_low(lcd_rw);
+   lcd_command(lcd_function_set);
+   lcd_command(lcd_display_control);
+   lcd_command(lcd_clear_display);
+   delay_ms(2);
+   lcd_command(lcd_entry_mode);
+   LCD_COMMAND(0x40); // di chhuyen den cgram
+   for(n=0;n<64;n++)LCD_DATA(LCD_MA_8DOAN[n]);
+}

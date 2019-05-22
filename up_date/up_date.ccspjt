@@ -1,0 +1,21 @@
+[PROJECT]
+Target=up_date.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=up_date.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[up_date.c]
+Type=4
+[mru-list]
+1=up_date.c
+[Opened Files]
+1=up_date.c
+2=
+3=
+4=
+[Units]
+Count=1
+1=up_date (main)

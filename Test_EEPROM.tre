@@ -1,0 +1,28 @@
+ÀÄTest_EEPROM
+   ÀÄMAIN  0/95  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄlcd_setup  0/30  Ram=0
+      ³  ÃÄlcd_command  0/9  Ram=1
+      ³  ³  ÀÄlcd_out  0/24  Ram=2
+      ³  ÃÄlcd_command  0/9  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_command  0/9  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÀÄlcd_command  0/9  Ram=1
+      ³     ÀÄ*
+      ÃÄlcd_clear  0/9  Ram=0
+      ³  ÃÄlcd_command  0/9  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄreadEEPROM  0/40  Ram=7
+      ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ÀÄlcd_command  0/9  Ram=1
+      ³     ÀÄ*
+      ÃÄlcd_data  0/9  Ram=1
+      ³  ÀÄlcd_out  0/24  Ram=2
+      ÃÄreadEEPROM  0/40  Ram=7
+      ÃÄlcd_goto_xy  0/18  Ram=7
+      ³  ÀÄ*
+      ÀÄlcd_data  0/9  Ram=1
+         ÀÄ*

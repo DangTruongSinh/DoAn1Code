@@ -1,0 +1,45 @@
+#include <16f877a.h>
+#FUSES NOWDT, HS, NOPUT, NOPROTECT, NODEBUG, NOBROWNOUT, NOLVP, NOCPD, NOWRT
+#use delay(CLOCK=20MHz) 
+#include "D:\DoAn1\LCD.c"
+
+UNSIGNED INT KEY_NHAN()
+{     SIGNED INT8  MAQUETCOT,MAPHIM,HANG,COT;
+      MAQUETCOT = 0B11111110;   MAPHIM=HANG=0XFF;
+      FOR(COT=0;COT<4;COT++)
+         {   
+            OUTPUT_B(MAQUETCOT);  MAQUETCOT  = (MAQUETCOT<<1) + 0x1;
+            IF         (!INPUT(PIN_B4))      {HANG=0;   BREAK;}
+            ELSE    IF (!INPUT(PIN_B5))      {HANG=1;   BREAK;}
+            ELSE    IF (!INPUT(PIN_B6))      {HANG=2;   BREAK;}
+            ELSE    IF (!INPUT(PIN_B7))      {HANG=3;   BREAK;}
+          
+         }          
+      IF (HANG!=0XFF)   MAPHIM   = COT*4 + HANG;
+      RETURN(MAPHIM);
+  }
+
+void main()
+{
+   lcd_setup();
+   lcd_clear();
+   set_tris_b(0b11110000);
+   port_b_pullups (0b00001111);
+   //write_eeprom(0,'1');
+  lcd_data("sinh");
+  lcd_goto_xy(2,3);
+  lcd_data("ha");
+   unsigned int8 key;
+   while(true)
+   {
+      key = KEY_NHAN();
+      if(key!=0xff)
+      {
+         lcd_goto_xy(0,0);
+         lcd_data(key+0x30);
+         while( KEY_NHAN()!=0xff);
+      }
+      
+   }
+
+}

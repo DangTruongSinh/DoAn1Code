@@ -1,0 +1,19 @@
+#include <16f877a.h>
+
+#FUSES NOWDT, HS, NOPUT, NOPROTECT, NODEBUG, NOBROWNOUT, NOLVP, NOCPD, NOWRT
+#use delay(CLOCK=20MHz) 
+#include <lcd.c>
+void main()
+{
+/*   write_eeprom(0,'1');
+   delay_ms(300);
+   char c = read_eeprom(0);*/
+   lcd_init();
+   lcd_gotoxy(0,0);
+   printf(lcd_putc,"sinh");
+   while(true)
+   {
+     
+      
+   }
+}
